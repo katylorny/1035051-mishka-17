@@ -4,4 +4,30 @@
   background-color: @white;
   font: inherit;
   line-height: 30px;
+  &__wrapper {
+    width: 260px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  &__button {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    &__wrapper {
+    width: 668px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    &__wrapper {
+      width: 1050px;
+    }
+  }
 }

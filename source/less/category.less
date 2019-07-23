@@ -1,6 +1,7 @@
 .category {
-  margin: 0;
   padding: 0;
+  width: 320px;
+  margin: 0 auto;
   background: #fafafa;
   //TODO: добавить фоновое изображение
   font: inherit;
@@ -8,4 +9,22 @@
   line-height: 24px;
   font-weight: bold;
   color: @white;
+  &__title {
+    color: @black;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .category {
+    width: 668px;
+    &__list {
+      flex-direction: row;
+    }
+  }
 }

@@ -7,12 +7,33 @@
 </head>
 <body>
 <header class="header">
-  <a class="header__link">
-    <img class="header__logo" src="#" alt="логотип MISHKA">
-  </a>
-  <button type="button" class="header__wrap">Открыть меню</button>
+  <div class="header__wrapper">
+    <a class="header__link">
+      <img class="header__logo" src="#" alt="логотип MISHKA">
+    </a>
+    <button type="button" class="header__wrap">Открыть меню</button>
+  </div>
+  <nav class="main-nav">
+    <ul class="main-nav__site">
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">Каталог товаров</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">Вязание на заказ</a>
+      </li>
+    </ul>
+    <ul class="main-nav__user">
+      <li class="main-nav__item main-nav__item--search">
+        <a class="main-nav__link" href="#">Поиск по сайту</a>
+      </li>
+      <li class="main-nav__item main-nav__item--basket">
+        <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <main>
+  <div class="container">
   <section class="order">
     <h2 class="order__title">Вязание на заказ</h2>
     <p class="order__about">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
@@ -54,16 +75,19 @@
       <button type="submit" class="order__button button">Отправить заказ</button>
     </form>
   </section>
+  </div>
 </main>
 <footer class="footer">
-  <div class="footer__social social">
-    <a href="#" class="social__item social__item--instagram">Мишка в Инстаграме</a>
-    <a href="#" class="social__item social__item--facebook">Мишка в Фейсбуке</a>
-    <a href="#" class="social__item social__item--twitter">Мишка в Твиттере</a>
-  </div>
-  <div class="footer__copyright copyright">
-    <p class="copyright__text">Разработано</p>
-    <img class="copyright__logo" src="#">
+  <div class="footer__wrapper">
+    <div class="footer__social social">
+      <a href="#" class="social__item social__item--instagram">Мишка в Инстаграме</a>
+      <a href="#" class="social__item social__item--facebook">Мишка в Фейсбуке</a>
+      <a href="#" class="social__item social__item--twitter">Мишка в Твиттере</a>
+    </div>
+    <div class="footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <img class="copyright__logo" src="#">
+    </div>
   </div>
 </footer>
 </body>
