@@ -2,61 +2,86 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="header">
-  <a class="header__link">
-    <img class="header__logo" src="#" alt="логотип MISHKA">
-  </a>
-  <button type="button" class="header__wrap">Открыть меню</button>
+  <div class="header__wrapper">
+    <a class="header__link">
+      <img class="header__logo" src="#" alt="логотип MISHKA">
+    </a>
+    <button type="button" class="header__wrap">Открыть меню</button>
+  </div>
+  <nav class="main-nav">
+    <ul class="main-nav__site">
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">Каталог товаров</a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">Вязание на заказ</a>
+      </li>
+    </ul>
+    <ul class="main-nav__user">
+      <li class="main-nav__item main-nav__item--search">
+        <a class="main-nav__link" href="#">Поиск по сайту</a>
+      </li>
+      <li class="main-nav__item main-nav__item--basket">
+        <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <main>
-  <section class="catalog">
-    <h2 class="catalog__title">Каталог товаров</h2>
-    <div class="product">
-      <h3 class="product__title">Зайчик-попрыгайчик</h3>
-      <p class="product__description">Рост 30 см, вес 200 г</p>
-      <div class="product__buy">
-        <span class="product__price">1 200 руб.</span>
-        <button class="product__reserve"></button>
+  <div class="container">
+    <section class="catalog">
+      <h2 class="catalog__title">Каталог товаров</h2>
+      <div class="product">
+        <h3 class="product__title">Зайчик-попрыгайчик</h3>
+        <p class="product__description">Рост 30 см, вес 200 г</p>
+        <div class="product__buy">
+          <span class="product__price">1 200 руб.</span>
+          <button class="product__reserve"></button>
+        </div>
       </div>
-    </div>
-    <div class="product">
-      <h3 class="product__title">Корзинка для белья</h3>
-      <p class="product__description">Диаметр 15 см, высота 10 см</p>
-      <div class="product__buy">
-        <span class="product__price">690 руб.</span>
-        <button class="product__reserve"></button>
+      <div class="product">
+        <h3 class="product__title">Корзинка для белья</h3>
+        <p class="product__description">Диаметр 15 см, высота 10 см</p>
+        <div class="product__buy">
+          <span class="product__price">690 руб.</span>
+          <button class="product__reserve"></button>
+        </div>
       </div>
-    </div>
-    <div class="product">
-      <h3 class="product__title">Большая корзинка
-        для игрушек</h3>
-      <p class="product__description">Диаметр 30 см, высота 30 см</p>
-      <div class="product__buy">
-        <span class="product__price">1 500 руб.</span>
-        <button class="product__reserve"></button>
+      <div class="product">
+        <h3 class="product__title">Большая корзинка
+          для игрушек</h3>
+        <p class="product__description">Диаметр 30 см, высота 30 см</p>
+        <div class="product__buy">
+          <span class="product__price">1 500 руб.</span>
+          <button class="product__reserve"></button>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="fabrication">
-    <h2 class="fabrication__title">Процесс производства</h2>
-    <video class="fabrication__video"></video>
-    <p></p>
-    <a class="fabrication__button button">Сделать заказ</a>
-  </section>
+    </section>
+    <section class="fabrication">
+      <h2 class="fabrication__title">Процесс производства</h2>
+      <video class="fabrication__video"></video>
+      <p></p>
+      <a class="fabrication__button button">Сделать заказ</a>
+    </section>
+  </div>
 </main>
 <footer class="footer">
-  <div class="footer__social social">
-    <a href="#" class="social__item social__item--instagram">Мишка в Инстаграме</a>
-    <a href="#" class="social__item social__item--facebook">Мишка в Фейсбуке</a>
-    <a href="#" class="social__item social__item--twitter">Мишка в Твиттере</a>
-  </div>
-  <div class="footer__copyright copyright">
-    <p class="copyright__text">Разработано</p>
-    <img class="copyright__logo" src="#">
+  <div class="footer__wrapper">
+    <div class="footer__social social">
+      <a href="#" class="social__item social__item--instagram">Мишка в Инстаграме</a>
+      <a href="#" class="social__item social__item--facebook">Мишка в Фейсбуке</a>
+      <a href="#" class="social__item social__item--twitter">Мишка в Твиттере</a>
+    </div>
+    <div class="footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <img class="copyright__logo" src="#">
+    </div>
   </div>
 </footer>
 </body>

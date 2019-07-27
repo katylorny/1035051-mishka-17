@@ -5,4 +5,26 @@
   font: inherit;
   font-size: 17px;
   font-weight: bold;
+
+  &__wrapper {
+    display: flex;
+    width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    &__wrapper {
+      width: 668px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    &__wrapper {
+      width: 1050px;
+    }
+  }
 }
