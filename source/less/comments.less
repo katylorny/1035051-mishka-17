@@ -1,4 +1,6 @@
 .comments {
+  display: none;
+  //TODO: СКРЫЛА ДЛЯ ЗАДАНИЯ
   margin: 0;
   padding: 0;
   background-color: @white;
@@ -7,5 +9,47 @@
 
   &__item {
     margin: 0;
+    margin-bottom: 37px;
+  }
+
+  &__author {
+    font-style: normal;
+    font-size: 17px;
+
+    b {
+      color: @black;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    margin-bottom: 38px;
+    height: 50px;
+    width: 100%;
+    border: 1px solid @border;
+  }
+
+  &__prew {
+    height: 100%;
+    width: 50%;
+    border: none;
+    background: transparent url("../img/icon-left-arrow.svg") no-repeat;
+    background-position: center center;
+  }
+
+  &__next {
+    height: 100%;
+    width: 50%;
+    border: none;
+    border-left: 1px solid @border;
+    background: transparent url("../img/icon-right-arrow.svg") no-repeat;
+    background-position: center center;
+  }
+
+  &__button {
+    display: block;
+    padding: 15px 0;
+    margin-bottom: 45px;
+    text-align: center;
   }
 }

@@ -1,6 +1,4 @@
 .footer {
-  margin: 0;
-  padding: 0;
   background-color: @lavender;
   font: inherit;
   color: @black;
@@ -14,13 +12,37 @@
     display: flex;
     flex-direction: column;
   }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid @border;
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .footer {
+    padding: 20px 0;
+
     &__wrapper {
       width: 668px;
       flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      display: block;
+      margin: auto 0;
     }
   }
 }
