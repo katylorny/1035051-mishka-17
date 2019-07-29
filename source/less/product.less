@@ -3,5 +3,115 @@
   padding: 0;
   background-color: @white;
   font: inherit;
+  list-style: none;
+
+  &__wrapper {
+    width: 100%;
+    background-color: @white;
+    padding-top: 80px;
+  }
+
+  &__wrap {
+    width: 208px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    border: 1px solid @border;
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 17px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-top: 1px solid @border;
+  }
+
+  &__reserve {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent url("../img/icon-cart-fill.svg") no-repeat;
+  }
+
   //TODO: разобраться со шрифтами
+}
+
+
+@media (min-width: @tablet-width) {
+  .product {
+    &__item {
+      display: flex;
+    }
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 268px;
+    }
+
+    &__image {
+      width: 334px;
+      height: 334px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 29px;
+    }
+
+    &__description {
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 316px;
+    }
+
+    &__wrap {
+      width: 256px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-basis: 196px;
+    }
+
+    &__image {
+      width: 316px;
+      height: 462px;
+    }
+  }
 }
