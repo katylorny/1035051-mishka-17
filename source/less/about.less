@@ -1,15 +1,134 @@
 .about {
-  margin: 0;
-  padding: 0;
   background-color: @white;
-  font: inherit;
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
 
   &__advantages {
-    margin: 0;
+    margin: 0 0 63px;
     padding: 0;
     list-style-type: none;
+  }
+
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &__advantage {
+    margin-top: 90px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+    }
+  }
+
+  &__advantage--ecologic {
+    &::before {
+      width: 32px;
+      height: 39px;
+      background: url("../img/icon-feature-flower-marine.svg") no-repeat;
+    }
+  }
+
+  &__advantage--skandi {
+    &::before {
+      width: 47px;
+      height: 28px;
+      background: url("../img/icon-feature-money-marine.svg") no-repeat;
+    }
+  }
+
+  &__advantage--likes {
+    &::before {
+      width: 34px;
+      height: 28px;
+      background: url("../img/icon-feature-heart-marine.svg") no-repeat;
+    }
+  }
+
+  &__advantage--handmade {
+    &::before {
+      width: 35px;
+      height: 34px;
+      background: url("../img/icon-feature-ball-marine.svg") no-repeat;
+    }
+  }
+
+  &__advantage--domestic {
+    &::before {
+      width: 55px;
+      height: 23px;
+      background: url("../img/icon-feature-rocket-marine.svg") no-repeat;
+    }
+  }
+
+  &__advantage--gift {
+    &::before {
+      width: 33px;
+      height: 32px;
+      background: url("../img/icon-feature-gift-marine.svg") no-repeat;
+      top: -60px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      color: @black;
+    }
+
+    &__advantages {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__advantage {
+      width: 50%;
+      color: @black;
+      &--skandi {
+        order: 3;
+      }
+
+      &--likes {
+        order: 5;
+      }
+
+      &--handmade {
+        order: 2;
+      }
+
+      &--domestic {
+        order: 4;
+      }
+
+      &--gift {
+        order: 5;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    width: 700px;
+    margin: 0 auto;
+
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__advantages {
+      width: 700px;
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 }

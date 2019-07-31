@@ -7,4 +7,45 @@
   line-height: 30px;
   color: @black;
   font-weight: bold;
+  padding-top: 80px;
+
+  &__delivery {
+    display: none;
+  }
+
+  &__title {
+    margin: 0 auto 75px;
+    text-align: center;
+    font-size: 27px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    position: relative;
+
+    &__delivery {
+      display: flex;
+      position: absolute;
+      top: -77px;
+      //НЕ ТОЧНО
+      right: 0;
+      color: @brown;
+      font-size: 15px;
+      font-weight: normal;
+      list-style: none;
+
+      &__link {
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 90px;
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
 }

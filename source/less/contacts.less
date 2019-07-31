@@ -1,4 +1,6 @@
 .contacts {
+  display: none;
+  //TODO: СКРЫЛА ДЛЯ ЗАДАНИЯ
   margin: 0;
   padding: 0;
   background-color: @white;
@@ -13,8 +15,33 @@
 
   &__button {
     display: block;
+    width: 260px;
+    margin: 0 auto 40px;
     padding: 10px;
     text-align: center;
+  }
+
+  &__address {
+    width: 260px;
+    border-spacing: 0 40px;
+  }
+
+  &__field {
+    vertical-align: top;
+    width: 77px;
+  }
+
+  &__value--email {
+    border-bottom: 1px solid @marine-dark;
+  }
+
+  &__map {
+    //TODO: временно
+    width: 320px;
+    height: 457px;
+    background: white url("../img/map-mobile@1x.jpg") no-repeat;
+    background-position: top center;
+    margin: 0 auto 39px;
   }
 }
 

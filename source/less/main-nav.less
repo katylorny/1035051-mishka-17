@@ -1,10 +1,178 @@
 .main-nav {
+  display: none;
   width: 320px;
   margin: 0 auto;
+
+  &__item {
+    list-style: none;
+    //width: 100%;
+    border-top: 1px solid @border;
+    margin: 0 auto;
+  }
+
+  &__item--search {
+    position: relative;
+  }
+
+  &__item--basket {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    //width: 100%;
+    color: @black;
+    text-decoration: none;
+    padding: 33px 0 30px 75px;
+  }
 
   &__site,
   &__user {
     width: 100%;
-    list-style: none;
+    //list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__additional {
+    display: none;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    //position: relative;
+    margin: 0;
+    margin-left: auto;
+    width: auto;
+    flex-wrap: wrap;
+
+    &__site {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      top: calc(100% + 20px);
+      right: 0;
+      flex-wrap: wrap;
+      font-size: 15px;
+      line-height: 25px;
+      //width: auto;
+
+      .main-nav__link {
+        padding: 0 37px 0 0;
+      }
+    }
+
+    &__user {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      //flex-wrap: wrap;
+    }
+
+    &__link {
+      padding: 33px 0;
+      position: relative;
+    }
+
+    &__link--basket {
+      box-sizing: border-box;
+      padding-left: 84px;
+      width: 266px;
+    }
+
+    &__item {
+      border: none;
+      border-left: 1px solid @border;
+      margin: 0;
+    }
+
+    //&__item--search,
+    //&__item--knitting {
+    //  border: none;
+    //}
+
+    &__icon {
+      //position: static;
+    }
+
+    &__item--search {
+      font-size: 0;
+      padding: 0;
+      //margin-left: auto;
+      width: 84px;
+      //background-color: yellow;
+    }
+
+    &__item--basket {
+      //position: relative;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+
+    &__site {
+      position: static;
+      width: auto;
+      z-index: 1; //Добавила, чтобы в каталоге было видно
+    }
+
+    &__user {
+      width: auto;
+    }
+
+    &__site .main-nav__link {
+      padding: 30px 37px 30px 0;
+      display: block;
+      //margin: auto  0;
+    }
+
+    &__item--search {
+      border-left: none;
+    }
+
+    &__item--knitting .main-nav__link {
+      padding-left: 35px;
+    }
+
+    &__item--catalog {
+      border-left: none;
+      //border-right: 1px solid @border;
+    }
+
+    &__additional {
+      display: flex;
+      position: absolute;
+      padding: 0;
+      top: calc(100% - 30px);
+      left: 0;
+      color: @black;
+    }
+
+    &__item--new {
+      border: none;
+    }
+
+    &__item--sell {
+      border-left: none;
+      margin-left: 60px;
+    }
+  }
+}
+
