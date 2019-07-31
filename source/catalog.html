@@ -10,8 +10,12 @@
 <header class="header">
   <div class="header__wrapper--tablet">
     <div class="header__wrapper">
-      <a class="header__link">
-        <!--<img class="header__logo" src="img/logo-mobile.svg" alt="логотип MISHKA" width="86" height="35">-->
+      <a href="index.html" class="header__link">
+        <picture>
+          <source media="(min-width:1200px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+          <img class="header__logo" src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
+        </picture>
       </a>
       <button type="button" class="header__wrap" aria-label="Открыть меню"><img src="img/icon-menu-open.svg" width="20"
                                                                                 height="14"></button>
@@ -22,7 +26,7 @@
           <a class="main-nav__link" href="#">Каталог товаров</a>
         </li>
         <li class="main-nav__item main-nav__item--knitting">
-          <a class="main-nav__link" href="#">Вязание на заказ</a>
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="main-nav__user">
@@ -48,7 +52,7 @@
     <div class="container">
       <ul class="catalog__delivery">
         <li>
-          <a class="category__delivery-rus">
+          <a href="#" class="category__delivery-rus">
             Бесплатная доставка по России
           </a>
         </li>
@@ -58,16 +62,11 @@
     <div class="product__wrapper">
       <ul class="product container">
         <li class="product__item">
-          <img
-            class="product__image"
-            srcset="img/photo-hare-mobile@1x.jpg 260w,
-            img/photo-hare-tablet@1x.jpg 334w,
-            img/photo-hare-desktop@1x.jpg 316w"
-            sizes="(max-width: 767px) 260px,
-            (max-width: 1199px) 334px,
-            316px"
-            src="img/photo-hare-mobile@1x.jpg" width="260" height="195">
-
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/photo-hare-desktop@1x.jpg">
+            <source media="(min-width:768px)" srcset="img/photo-hare-tablet@1x.jpg">
+            <img class="product__image" src="img/photo-hare-mobile@1x.jpg">
+          </picture>
           <div class="product__wrap">
             <div class="product__info">
               <h3 class="product__title">Зайчик-попрыгайчик</h3>
@@ -75,19 +74,16 @@
             </div>
             <div class="product__buy">
               <span class="product__price">1 200 руб.</span>
-              <button class="product__reserve"></button>
+              <button class="product__reserve"><span class="visually-hidden">Купить</span></button>
             </div>
           </div>
         </li>
         <li class="product__item">
-          <img class="product__image"
-               srcset="img/photo-bowl-mobile@1x.jpg 260w,
-            img/photo-bowl-tablet@1x.jpg 334w,
-            img/photo-bowl-desktop@1x.jpg 316w"
-               sizes="(max-width: 767px) 260px,
-            (max-width: 1199px) 334px,
-            316px"
-               src="img/photo-bowl-mobile@1x.jpg" width="260" height="195">
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/photo-bowl-desktop@1x.jpg">
+            <source media="(min-width:768px)" srcset="img/photo-bowl-tablet@1x.jpg">
+            <img class="product__image" src="img/photo-bowl-mobile@1x.jpg">
+          </picture>
           <div class="product__wrap">
             <div class="product__info">
               <h3 class="product__title">Корзинка для белья</h3>
@@ -95,18 +91,16 @@
             </div>
             <div class="product__buy">
               <span class="product__price">690 руб.</span>
-              <button class="product__reserve"></button>
+              <button class="product__reserve"><span class="visually-hidden">Купить</span></button>
             </div>
           </div>
         </li>
         <li class="product__item">
-          <img srcset="img/photo-toys-mobile@1x.jpg 260w,
-            img/photo-toys-tablet@1x.jpg 334w,
-            img/photo-toys-desktop@1x.jpg 316w"
-               sizes="(max-width: 767px) 260px,
-            (max-width: 1199px) 334px,
-            316px"
-               class="product__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195">
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/photo-toys-desktop@1x.jpg">
+            <source media="(min-width:768px)" srcset="img/photo-toys-tablet@1x.jpg">
+            <img class="product__image" src="img/photo-toys-mobile@1x.jpg">
+          </picture>
           <div class="product__wrap">
             <div class="product__info">
               <h3 class="product__title">Большая корзинка
@@ -115,7 +109,7 @@
             </div>
             <div class="product__buy">
               <span class="product__price">1 500 руб.</span>
-              <button class="product__reserve"></button>
+              <button class="product__reserve"><span class="visually-hidden">Купить</span></button>
             </div>
           </div>
         </li>
@@ -126,11 +120,11 @@
     <h2 class="fabrication__title">Процесс производства</h2>
     <video class="fabrication__video"></video>
     <p></p>
-    <a class="fabrication__button button">Сделать заказ</a>
+    <a href="#" class="fabrication__button button">Сделать заказ</a>
   </section>
 </main>
 <footer class="footer">
-  <div class="footer__wrapper">
+  <div class="footer__wrapper container">
     <img class="footer__logo" src="img/logo-footer.svg" width="102" height="43">
     <div class="footer__social social">
       <a href="#" class="social__item social__item--instagram"><p class="visually-hidden">Мишка в Инстаграме</p></a>

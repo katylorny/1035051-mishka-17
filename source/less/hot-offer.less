@@ -27,13 +27,14 @@
   &__details {
     border-collapse: collapse;
     width: 260px;
+  }
 
-    td {
-      border-bottom: 1px solid @border;
-      border-right: none;
-      border-left: none;
-      height: 40px;
-    }
+  &__parameter,
+  &__value {
+    border-bottom: 1px solid @border;
+    border-right: none;
+    border-left: none;
+    height: 40px;
   }
 
   &__image {
@@ -80,7 +81,7 @@
     //  top: -15px;
     //}
 
-    &__wrap--tablet {
+    &__title-wrapper {
       display: flex;
       justify-content: space-between;
     }
@@ -169,7 +170,6 @@
       top: 12px;
       margin: 0;
     }
-
   }
 
   .separator {
