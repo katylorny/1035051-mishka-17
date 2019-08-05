@@ -28,6 +28,17 @@
 
   &__logo {
     display: none;
+    margin: auto 0;
+    cursor: pointer;
+
+    &:hover {
+      fill: @icon-social-hover;
+    }
+
+    &:active,
+    &:focus {
+      opacity: 0.4;
+    }
   }
 }
 
