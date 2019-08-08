@@ -4,8 +4,27 @@
   font: inherit;
   line-height: 18px;
   color: @black;
+  //cursor: pointer;
 
   &__link {
     margin-left: 29px;
+  }
+
+  &__logo {
+    fill: @marine;
+  }
+
+  &:hover &__logo{
+    fill: @icon-social-hover;
+  }
+
+  &:active &__logo,
+  &:focus &__logo {
+    opacity: 0.4;
+  }
+
+  &:active &__text,
+  &:focus &__text {
+    opacity: 0.4;
   }
 }
