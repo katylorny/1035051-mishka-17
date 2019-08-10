@@ -28,8 +28,6 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-
-
 gulp.task("server", function () {
   server.init({
     server: "build/",
