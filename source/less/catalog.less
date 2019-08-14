@@ -1,13 +1,13 @@
 .catalog {
   margin: 0;
-  padding: 0;
   background-color: @lavender;
   font: inherit;
-  //font-size: 27px;
   line-height: 30px;
   color: @black;
   font-weight: bold;
-  padding-top: 80px;
+  padding: 70px 0 0;
+  z-index: 2;
+
 
   &__delivery {
     display: none;
@@ -24,11 +24,13 @@
 @media (min-width: @tablet-width) {
   .catalog {
     position: relative;
+    padding: 95px 0 0;
+
 
     &__delivery {
       display: flex;
       position: absolute;
-      top: -77px;
+      top: -96px;
       //НЕ ТОЧНО
       right: 0;
       color: @brown;
@@ -43,7 +45,7 @@
     }
 
     &__title {
-      margin-bottom: 90px;
+      margin-bottom: 80px;
       font-size: 43px;
       line-height: 50px;
     }

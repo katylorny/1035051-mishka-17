@@ -1,28 +1,25 @@
 .social {
   margin: 0;
-  padding: 0;
+  //padding: 0;
 
   &__item {
-    margin: 30px 20px;
+    margin: 0 20px;
   }
 
   &__item--instagram {
     width: 22px;
     height: 21px;
-    //background: transparent url("../img/icon-insta.svg") no-repeat;
   }
 
   &__item--facebook {
     width: 15px;
     height: 28px;
-    margin-top: 25px;
-    //background: transparent url("../img/icon-fb.svg") no-repeat;
+    margin-top: -4px;
   }
 
   &__item--twitter {
     width: 23px;
     height: 20px;
-    //background: transparent url("../img/icon-twitter.svg") no-repeat;
   }
 
   &__icon {
@@ -36,5 +33,13 @@
     &:focus {
       opacity: 0.4;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    border: none;
+    margin: auto;
+    padding: 0;
   }
 }

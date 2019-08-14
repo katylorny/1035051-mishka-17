@@ -1,9 +1,9 @@
 .category {
   width: 320px;
   margin: 0 auto;
-  padding-top: 75px;
+  padding-top: 52px;
   background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat;
-  background-position: top center;
+  background-position: center -18px;
   font: inherit;
   font-size: 19px;
   line-height: 24px;
@@ -26,6 +26,8 @@
     font-size: 27px;
     line-height: 30px;
     margin-bottom: 122px;
+    letter-spacing: 2px; //сделала, потому что шрифт вообще другой. не особо помогло.
+    margin-left: 6px; //пришлось сдвинуть вправо, чтобы хоть немного соответствовало макету
   }
 
   &__list {
@@ -36,11 +38,19 @@
     list-style: none;
   }
 
-  &__item {
-    p {
-      margin: 0;
-      width: 130px;
-    }
+  .category__item-text {
+    margin: 0;
+    width: 130px;
+    letter-spacing: 1.1px;
+  }
+
+  &__item .category__link:hover::after,
+  &__item .category__link:focus::after {
+    opacity: 0.3;
+  }
+
+  &__item .category__link:active::after {
+    opacity: 0.1;
   }
 
   &__link {
@@ -48,15 +58,21 @@
     color: @white;
     display: block;
     padding: 30px;
+    padding-top: 25px;
+
+    &:hover,
+    &:focus {
+      padding-bottom: 35px;
+      margin-top: -5px;
+    }
   }
 
-  &__item--interior {
+  &__item--interior .category__link {
     background: @marine;
     position: relative;
-    //background-position: center right 36px;
   }
 
-  &__item--interior::after {
+  &__item--interior .category__link::after {
     content: "";
     position: absolute;
     width: 40px;
@@ -69,12 +85,12 @@
     transform: translateY(-50%);
   }
 
-  &__item--toys {
+  &__item--toys .category__link {
     background-color: @marine-dark;
     position: relative;
   }
 
-  &__item--toys::after {
+  &__item--toys .category__link::after {
     content: "";
     position: absolute;
     width: 60px;
@@ -94,6 +110,15 @@
     width: auto;
     background: #f9f9f9 url("../img/hero-tablet@1x.jpg") no-repeat;
     background-position: top center;
+
+    &__link {
+      padding: 31px 30px 39px;
+
+      &:hover,
+      &:focus {
+        padding-bottom: 43px;
+      }
+    }
 
     &__list {
       flex-direction: row;
@@ -115,7 +140,7 @@
     &__delivery {
       display: flex;
       position: absolute;
-      top: -140px;
+      top: -156px;
       //НЕ ТОЧНО
       right: 0;
       list-style: none;
@@ -129,7 +154,9 @@
     }
 
     &__title {
-      margin: 65px auto 380px;
+      margin: 101px auto 373px;
+      letter-spacing: 2.5px;
+      padding-left: 9px;
       width: 520px;
       font-size: 43px;
       line-height: 50px;
@@ -159,6 +186,16 @@
 
     &__list {
       width: 1050px;
+    }
+
+    &__delivery {
+      top: -162px;
+    }
+
+    &__title {
+      font-size: 53px;
+      width: 610px;
+      margin: 91px auto 367px;
     }
   }
 }

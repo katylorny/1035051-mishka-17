@@ -3,6 +3,7 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
+  padding-top: 6px;
 
   &__advantages {
     margin: 0 0 63px;
@@ -16,8 +17,9 @@
   }
 
   &__advantage {
-    margin-top: 90px;
+    margin-top: 84px;
     position: relative;
+    letter-spacing: 1px;
 
     &::before {
       content: "";
@@ -78,20 +80,25 @@
 
 @media (min-width: @tablet-width) {
   .about {
+    padding-top: 24px;
+
     &__title {
       font-size: 43px;
       line-height: 50px;
       color: @black;
+      margin-bottom: 0;
     }
 
     &__advantages {
       display: flex;
       flex-wrap: wrap;
+      font-size: 20px;
     }
 
     &__advantage {
       width: 50%;
       color: @black;
+      margin-top: 110px;
 
       &--skandi {
         order: 3;
@@ -120,6 +127,7 @@
   .about {
     width: 700px;
     margin: 0 auto;
+    padding-top: 35px;
 
     &__title {
       font-size: 53px;
@@ -130,6 +138,7 @@
       width: 700px;
       font-size: 20px;
       line-height: 22px;
+      margin-top: -7px;
     }
   }
 }

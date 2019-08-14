@@ -11,11 +11,13 @@
     display: flex;
     width: 260px;
     margin: 0 auto;
+    padding: 22px 0 16px;
   }
 
   &__link {
     display: block;
-    margin: 22px 0 22px calc(50% - 43px);
+    //margin: 22px 0 16px calc(50% - 43px);
+    margin-left: calc(50% - 43px);
   }
 
   &__logo {
@@ -34,23 +36,34 @@
 
   &__wrap {
     padding: 0;
-    margin-top: 33px;
-    margin-bottom: 32px;
+    margin: auto 0 19px auto;
     border: none;
-    background: transparent;
-    margin-left: auto;
     width: 20px;
     height: 14px;
+    background: url("../img/icon-menu-open.svg") no-repeat;
+    cursor: pointer;
+    //
+    //&:active {
+    //  outline: black;
+    //}
+  }
+
+  &__wrap--close {
+    background: url("../img/icon-menu-close.svg") no-repeat;
+    width: 21px;
+    height: 20px;
+    margin: 7px 0 auto auto;
   }
 }
 
 @media (min-width: @tablet-width) {
   .header {
     //flex-wrap: wrap;
+    padding: 0;
 
     &__wrapper {
       width: 180px;
-      padding: 0;
+      padding: 20px 0 16px;
       margin: 0;
     }
 
@@ -68,6 +81,7 @@
 
     &__link {
       margin-left: 0;
+      letter-spacing: 0.7px;
     }
 
     &__logo {
@@ -89,12 +103,17 @@
 
     &__link {
       position: absolute;
-      margin: 10px 0 0;
-      left: 50%;
+      margin: 0;
       transform: translate(-50%);
       width: 149px;
       height: 72px;
       z-index: 3;
+      left: 50%;
+      top: 10px;
+    }
+
+    .main-nav__site .main-nav__link {
+      font-size: 17px;
     }
 
     &__logo {
