@@ -54,14 +54,18 @@ img {
   display: none;
 }
 
-.filling {
+.overlay {
+  display: none;
   width: 100vw;
   height: 100vh;
-  background-color: white;
-  opacity: 1;
-  position: absolute;
+  background-color: @white;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
 }
 
-.filling-on {
-  opacity: 0.2;
+.overlay--on {
+  display: block;
 }
