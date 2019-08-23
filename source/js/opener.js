@@ -25,7 +25,7 @@ for (var i=0; i<cart.length; i++) {
 }
 
 overlay.addEventListener("click", function (evt) {
-  if (!(modal.classList.contains("modal--closed"))) {
+  if (!modal.classList.contains("modal--closed")) {
     modal.classList.add("modal--closed");
     overlay.classList.remove("overlay--on");
   }
@@ -34,7 +34,7 @@ overlay.addEventListener("click", function (evt) {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (!(modal.classList.contains("modal--closed"))) {
+    if (!modal.classList.contains("modal--closed")) {
       modal.classList.add("modal--closed");
       overlay.classList.remove("overlay--on");
     }

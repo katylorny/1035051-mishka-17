@@ -1,11 +1,15 @@
 .contacts {
-  display: none;
-  //TODO: СКРЫЛА ДЛЯ ЗАДАНИЯ
   margin: 0;
   padding: 0;
   background-color: @white;
   font: inherit;
   line-height: 30px;
+
+  &__title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 33px;
+  }
 
   &__wrapper {
     width: 260px;
@@ -15,15 +19,16 @@
 
   &__button {
     display: block;
-    width: 260px;
+    width: 236px;
     margin: 0 auto 40px;
-    padding: 10px;
+    padding: 14px 10px;
     text-align: center;
   }
 
   &__address {
     width: 260px;
-    border-spacing: 0 40px;
+    border-spacing: 0 27px;
+    margin-top: -17px;
   }
 
   &__field {
@@ -41,22 +46,124 @@
     height: 457px;
     background: white url("../img/map-mobile@1x.jpg") no-repeat;
     background-position: top center;
-    margin: 0 auto 39px;
+    margin: 9px auto 39px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
+    font-size: 17px;
+    line-height: 30px;
+    padding-top: 41px;
+
     &__wrapper {
       width: 668px;
+    }
+
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 64px;
+    }
+
+    &__address {
+      width: 100%;
+      border-spacing: 0;
+      margin-bottom: 56px;
+    }
+
+    &__field--address {
+      padding-left: 46px;
+    }
+
+    &__address tbody {
+      display: flex;
+    }
+
+    &__map {
+      width: @tablet-width;
+      background: url("../img/map-tablet@1x.jpg") no-repeat;
+      margin: 9px auto 55px;
+    }
+
+    &__button {
+      width: 206px;
+      margin-bottom: 57px;
+    }
+  }
+}
+
+//@media (min-width: @desktop-width) and (max-width: 1999px) {
+//  .contacts__address tbody {
+//    display: flex;
+//  }
+//}
+
+@media (min-resolution: 2dppx) and (min-width: @tablet-width) {
+  .contacts {
+    &__map {
+      background-image: url("../img/map-tablet@2x.jpg");
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 126px 0 105px 172px;
+    position: relative;
+    box-sizing: border-box;
+
     &__wrapper {
+      position: static;
       width: 1050px;
+    }
+
+    &__wrapper--desktop {
+      width: 1050px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      letter-spacing: 2.5px;
+    }
+
+    &__address {
+      display: table;
+      border-spacing: 0 27px;
+      margin-top: -70px;
+
+      tbody {
+        display: table;
+      }
+    }
+
+    &__field--address {
+      padding: 0;
+    }
+
+    &__map {
+      position: absolute;
+      top: -78px;
+      left: 353px;
+      width: 525px;
+      background-image: url("../img/map-desktop@1x.jpg");
+    }
+
+    &__button {
+      margin: -31px 0 0 3px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: 2dppx){
+  .contacts {
+    &__map {
+      background-image: url("../img/map-desktop@2x.jpg");
     }
   }
 }

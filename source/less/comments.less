@@ -1,21 +1,27 @@
 .comments {
-  display: none;
-  //TODO: СКРЫЛА ДЛЯ ЗАДАНИЯ
   margin: 0;
   padding: 0;
   background-color: @white;
   font: inherit;
   line-height: 30px;
 
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &__quote {
+    margin-bottom: 27px;
+  }
+
   &__item {
-    margin: 0;
-    margin-bottom: 37px;
+    margin: 0 0 29px;
   }
 
   &__author {
     font-style: normal;
     font-size: 17px;
-
+    letter-spacing: 1px;
     b {
       color: @black;
     }
@@ -29,21 +35,29 @@
     border: 1px solid @border;
   }
 
-  &__prew {
-    height: 100%;
-    width: 50%;
-    border: none;
-    background: transparent url("../img/icon-left-arrow.svg") no-repeat;
-    background-position: center center;
-  }
-
+  &__prew,
   &__next {
     height: 100%;
     width: 50%;
     border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  &__prew:focus .comments__arrow,
+  &__prew:hover .comments__arrow,
+  &__next:hover .comments__arrow,
+  &__next:focus .comments__arrow {
+    opacity: 0.6;
+  }
+
+  &__prew:active .comments__arrow,
+  &__next:active .comments__arrow {
+    opacity: 0.3;
+  }
+
+  &__next {
     border-left: 1px solid @border;
-    background: transparent url("../img/icon-right-arrow.svg") no-repeat;
-    background-position: center center;
   }
 
   &__button {
@@ -51,5 +65,91 @@
     padding: 15px 0;
     margin-bottom: 45px;
     text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comments {
+    position: relative;
+    font-size: 17px;
+    line-height: 30px;
+    background: url("../img/review@1x.jpg") no-repeat top left;
+    width: @tablet-width;
+    margin: 0 auto 66px;
+    padding-top: 43px;
+    padding-bottom: 18px;
+
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      margin-bottom: 46px;
+    }
+
+    &__wrap {
+      display: flex;
+    }
+
+    &__toggle {
+      width: 167px;
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border: none;
+    }
+
+    &__next {
+      border: none;
+    }
+
+    &__button {
+      width: 171px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 14px 0;
+    }
+
+    &__quote {
+      margin-bottom: 55px;
+    }
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: @tablet-width) {
+  .comments {
+    background-image: url("../img/review@2x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments {
+    margin: 0 auto;
+    width: 1050px;
+    padding-top: 27px;
+    padding-left: 176px;
+    box-sizing: border-box;
+    padding-bottom: 66px;
+    margin-bottom: 66px;
+
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    &__quote {
+      width: 801px;
+      margin-bottom: 40px;
+    }
+
+    &__button {
+      left: 699px;
+      top: 10px;
+    }
+
+    &__toggle {
+      left: 699px;
+      bottom: 2px;
+    }
   }
 }

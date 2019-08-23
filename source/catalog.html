@@ -206,11 +206,14 @@
 <section class="modal modal--closed">
   <h2 class="modal__title">Добавить в корзину</h2>
   <span class="modal__text">Выберите размер:</span>
-  <ul class="modal__sizes">
-    <li class="modal__size modal__size--selected">S</li>
-    <li class="modal__size">M</li>
-    <li class="modal__size">L</li>
-  </ul>
+  <div class="modal__sizes">
+    <input type="radio" name="size" value="S" id="S" class="modal__radio" checked>
+    <label for="S"><span class="modal__size">S</span></label>
+    <input type="radio" name="size" value="M" id="M" class="modal__radio">
+    <label for="M"><span class="modal__size">M</span></label>
+    <input type="radio" name="size" value="L" id="L" class="modal__radio">
+    <label for="L"><span class="modal__size">L</span></label>
+  </div>
   <button type="button" class="modal__button">Добавить</button>
 </section>
 <script src="js/opener.js"></script>
