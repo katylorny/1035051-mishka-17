@@ -1,8 +1,196 @@
 .fabrication {
-  display: none;
-  margin: 0;
+  margin: 0 auto 58px;
   padding: 0;
+  width: 260px;
   background-color: @white;
   font: inherit;
-  //TODO: разобраться со шрифтами!
+
+  &__header {
+    //width: 100%;
+    padding: 11px 30px 10px 88px;
+    border: 1px solid @border;
+  }
+
+  &__title {
+    font-size: 17px;
+    line-height: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 33px;
+      height: 30px;
+      background: url("../img/icon-video.svg") no-repeat;
+      background-size: cover;
+      //TODO: не получается сделать другого цвета.
+      position: absolute;
+      top: 5px;
+      left: -56px;
+      z-index: 16;
+    }
+  }
+
+  &__video {
+    //background: url("../img/video-mobile@1x.jpg") no-repeat;
+    display: block;
+    position: relative;
+    //width: 260px;
+    //height: 150px;
+  }
+
+  &__video-container {
+    display: block;
+  }
+
+  &__play {
+    margin: 35px auto 30px 50%;
+    transform: translateX(-50%);
+  }
+
+  &__play-button {
+    width: 101px;
+    height: auto;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__about {
+    margin: 0 auto;
+    padding: 26px 20px 32px;
+    border: 1px solid @border;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  &__text {
+    margin: 0 15px 24px 13px;
+  }
+
+  &__button {
+    display: block;
+    width: 188px;
+    margin: 0 auto;
+    padding: 14px 0;
+    text-align: center;
+  }
+}
+
+//@media (min-resolution: 2dppx) {
+//  background-image: url("../img/video-mobile@2x.jpg");
+//}
+
+@media (min-width: @tablet-width) {
+  .fabrication {
+    width: 668px;
+    margin-bottom: 62px;
+    position: relative;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__video {
+      order: -1;
+      width: 668px;
+      height: 456px;
+    }
+
+    &__header {
+      border-bottom: none;
+      padding-top: 20px;
+      padding-left: 105px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 1px;
+
+      &::before {
+        top: -5px;
+        left: -64px;
+      }
+    }
+
+    &__about {
+      border-top: none;
+      padding: 6px 26px 45px;
+    }
+
+    &__text {
+      font-size: 15px;
+      line-height: 30px;
+      margin: 0 15px 35px 13px;
+    }
+
+    &__button {
+      width: 580px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fabrication {
+    width: 1050px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 105px;
+
+
+    &__wrapper {
+      margin-left: 681px;
+      border: 1px solid @border;
+      padding-left: 77px;
+    }
+
+    &__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+    }
+
+    &__title {
+      margin-top: 96px;
+      margin-bottom: 33px;
+      width: 200px;
+      letter-spacing: 1.5px;
+
+      &::before {
+        top: -54px;
+        left: 2px;
+      }
+    }
+
+    &__header {
+      border: none;
+      padding: 0;
+    }
+
+    &__about {
+      border: none;
+      padding: 0;
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: 46px;
+    }
+
+    &__button {
+      width: 226px;
+      margin: 2px;
+      margin-bottom: 58px;
+      font-size: 17px;
+      letter-spacing: 1px;
+      padding: 12px 0 15px;
+    }
+  }
 }
