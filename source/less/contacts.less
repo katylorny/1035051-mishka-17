@@ -42,11 +42,18 @@
 
   &__map {
     //TODO: временно
+    position: relative;
     width: 320px;
     height: 457px;
     background: white url("../img/map-mobile@1x.jpg") no-repeat;
     background-position: top center;
     margin: 9px auto 39px;
+  }
+
+  &__marker {
+    position: absolute;
+    top: 145px;
+    left: 139px;
   }
 }
 
@@ -64,6 +71,17 @@
       font-size: 43px;
       line-height: 50px;
       margin-bottom: 64px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 618px;
+        width: 50px;
+        height: 82px;
+        background: url("../img/icon-flag.svg") no-repeat;
+      }
     }
 
     &__address {
@@ -84,6 +102,11 @@
       width: @tablet-width;
       background: url("../img/map-tablet@1x.jpg") no-repeat;
       margin: 9px auto 55px;
+    }
+
+    &__marker {
+      top: 139px;
+      left: 363px;
     }
 
     &__button {
@@ -130,6 +153,11 @@
       font-size: 53px;
       line-height: 57px;
       letter-spacing: 2.5px;
+
+      &::after {
+        top: -8px;
+        left: -109px;
+      }
     }
 
     &__address {
@@ -152,6 +180,11 @@
       left: 353px;
       width: 525px;
       background-image: url("../img/map-desktop@1x.jpg");
+    }
+
+    &__marker {
+      top: 145px;
+      left: 238px;
     }
 
     &__button {
