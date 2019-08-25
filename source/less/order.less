@@ -5,4 +5,103 @@
   //TODO: надо разделить заголовок и создать див вокруг формы или нет, фоны разные должны быть
   font: inherit;
   font-size: 13px;
+
+  &__title {
+    padding: 70px 0 76px;
+    background-color: @lavender;
+    text-align: center;
+    margin: 0 0 22px;
+    font-size: 27px;
+    line-height: 30px;
+    letter-spacing: 1.3px;
+  }
+
+  &__about {
+    margin-bottom: 24px;
+  }
+
+  &__legend {
+    padding-right: 25px;
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: @marine;
+  }
+
+  &__fieldset {
+    border: none;
+    border-top: 1px solid @marine;
+    padding: 8px 0 44px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: bold;
+    margin: 25px 0 0 0;
+    padding-left: 61px;
+    letter-spacing: 0.9px;
+  }
+
+  &__label--radio {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__label--checkbox {
+    margin-bottom: 46px;
+  }
+
+  &__radio {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 34px;
+      height: 34px;
+      top: -7px;
+      left: -62px;
+      background-color: @white;
+      position: absolute;
+      border: 2px solid black;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  &__radio:checked::before {
+    background-color: @marine;
+    box-shadow: 0 0 0 9px white inset;
+  }
+
+  &__checkbox {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 34px;
+      height: 34px;
+      top: -7px;
+      left: -62px;
+      background-color: @white;
+      position: absolute;
+      border: 2px solid black;
+      cursor: pointer;
+    }
+  }
+
+  &__checkbox:checked::before {
+    content: url("../img/icon-tick.svg");
+  }
+
+  &__radio,
+  &__checkbox {
+    position: absolute;
+    width: 0;
+    tab-index: 0;
+    //opacity: 0;
+    //z-index: -100;
+  }
 }
