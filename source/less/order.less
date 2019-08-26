@@ -5,6 +5,7 @@
   //TODO: надо разделить заголовок и создать див вокруг формы или нет, фоны разные должны быть
   font: inherit;
   font-size: 13px;
+  position: relative;
 
   &__title {
     padding: 70px 0 76px;
@@ -19,6 +20,14 @@
   &__about {
     margin-bottom: 24px;
   }
+
+  &__header {
+    position: relative;
+  }
+  //
+  //&__delivery {
+  //  display: none;
+  //}
 
   &__legend {
     padding-right: 25px;
@@ -190,6 +199,7 @@
     width: 260px;
     padding: 14px 0;
     margin-bottom: 55px;
+    cursor: pointer;
   }
 }
 
@@ -200,6 +210,18 @@
       line-height: 50px;
       padding: 93px 0 81px;
       margin-bottom: 73px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 768px;
+        height: 46px;
+        background: url("../img/bg-zigzag-fill.svg") repeat-x;
+        bottom: -35px;
+        background-size: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &__about {
@@ -231,8 +253,8 @@
     }
 
     &__legend--color {
-      top: 2px;
-      left: 3px;
+      top: 67px;
+      left: 2px;
     }
 
     &__legend--name {
@@ -240,13 +262,17 @@
     }
 
     &__legend--tel {
-      top: 3px;
-      left: -141px;
+      top: 67px;
+      left: 3px;
     }
 
     &__legend--email {
       top: 8px;
-      left: 147px;
+      left: 5px;
+    }
+
+    &__legend--add {
+      top: 67px;
     }
 
     &__radio {
@@ -263,10 +289,14 @@
     }
 
     &__color {
-      background-color: @lavender;
       padding-top: 65px;
-      width: 100%;
+      width: 668px;
       position: relative;
+      margin: 0 auto;
+    }
+
+    &__color--wrap {
+      background-color: @lavender;
     }
 
     &__colors {
@@ -326,7 +356,7 @@
     &__input--email {
       width: 468px;
     }
-    //TODO: НАШАМАНИЛА КАКУЮ-ТО ХУЙНЮ, НАДО СДЕЛАТЬ ПО-ЧЕЛОВЕЧЕСКИ
+
     &__name {
       padding: 26px 0 50px 167px;
     }
@@ -335,8 +365,9 @@
     &__tel {
       width: 668px;
       margin: 0 auto;
-      //padding: 64px 0 10px 231px;
-      padding-left: 286px;
+      padding-right: 0;
+      padding-left: 144px;
+      box-sizing: border-box;
     }
 
     &__tel {
@@ -344,7 +375,7 @@
 
       &::after {
         top: 60px;
-        right: 168px;
+        right: 27px;
       }
     }
 
@@ -354,7 +385,7 @@
 
       &::after {
         top: 2px;
-        right: 165px;
+        right: 23px;
       }
     }
 
@@ -378,7 +409,7 @@
     &__warn {
       position: absolute;
       top: 255px;
-      right: 0px;
+      right: 0;
       font-size: 17px;
       line-height: 30px;
     }
@@ -386,6 +417,133 @@
     &__button {
       width: 230px;
       margin-bottom: 50px;
+    }
+
+    //&__delivery {
+    //  display: flex;
+    //  position: absolute;
+    //  top: 4px;
+    //  right: 156px;
+    //  list-style: none;
+    //}
+    //
+    //&__delivery-rus {
+    //  color: @brown;
+    //  font-size: 15px;
+    //  font-weight: normal;
+    //  text-decoration: none;
+    //}
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order {
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+      padding-bottom: 104px;
+      margin-bottom: 123px;
+
+      &::after {
+        width: 1150px;
+        height: 33px;
+        background: url(../img/bg-zigzag-fill.svg) round;
+        bottom: -18px;
+      }
+    }
+
+    &__about {
+      padding-right: 160px;
+      padding-left: 174px;
+    }
+
+    &__type {
+      padding-left: 193px;
+    }
+
+    &__legend {
+
+    }
+
+    &__legend--type {
+      left: 63px;
+    }
+
+    &__legend--color {
+      left: 62px;
+    }
+
+    &__legend--name {
+      left: 61px;
+    }
+
+    &__legend--tel {
+      left: 63px;
+    }
+
+    &__legend--email {
+      top: 10px;
+      left: 63px;
+    }
+
+    &__legend--add {
+      left: 62px;
+    }
+
+    &__wrapper {
+      width: 1050px;
+    }
+
+    &__colors {
+      width: auto;
+      margin-left: 196px;
+    }
+
+    &__name {
+      padding: 26px 173px 50px 175px;
+    }
+
+    &__email,
+    &__tel {
+      width: 1050px;
+      padding-left: 151px;
+      box-sizing: border-box;
+    }
+
+    &__input--email,
+    &__input--tel {
+      width: 665px;
+    }
+
+    &__tel {
+      &::after {
+        right: 183px;
+      }
+    }
+
+    &__email {
+      &::after {
+        right: 179px;
+      }
+    }
+
+    &__add {
+      padding-left: 173px;
+      margin-bottom: 34px;
+    }
+
+    &__textarea {
+      width: 700px;
+    }
+
+    &__button {
+      margin-bottom: 50px;;
+      margin-left: 175px;
+    }
+
+    &__warn {
+      top: 251px;
+      right: 173px;
     }
   }
 }

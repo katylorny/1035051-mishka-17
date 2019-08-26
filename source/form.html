@@ -21,7 +21,6 @@
         </picture>
       </a>
       <button type="button" class="header__wrap" aria-label="Открыть меню">
-        <!--<img src="img/icon-menu-open.svg" width="20" height="14">-->
       </button>
     </div>
     <nav class="main-nav menu-closed">
@@ -57,13 +56,22 @@
         <li class="main-nav__item main-nav__item--sell"><a class="main-nav__link" href="#"><span>Распродажа</span></a>
         </li>
       </ul>
+      <ul class="main-nav__delivery">
+        <li>
+          <a href="#" class="main-nav__delivery-rus">
+            Бесплатная доставка по России
+          </a>
+        </li>
+      </ul>
     </nav>
   </div>
 </header>
 <main>
   <!--<div class="container">-->
     <section class="order">
+      <div class="order__header">
       <h2 class="order__title">Вязание на заказ</h2>
+      </div>
       <div class="container">
       <p class="order__about">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся
@@ -72,15 +80,15 @@
       <form class="order__form" action="https://echo.htmlacademy.ru">
         <div class="container">
         <fieldset class="order__fieldset order__type">
-          <legend class="order__legend">Тип</legend>
+          <legend class="order__legend order__legend--type">Тип</legend>
           <label class="order__label order__label--radio"><input class="order__radio" type="radio" name="type" checked>Аксессуар для интерьера</label>
           <label class="order__label order__label--radio"><input class="order__radio" type="radio" name="type">Детская игрушка</label>
         </fieldset>
         </div>
-        <!--<div class="container">-->
+        <div class="order__color--wrap">
         <fieldset class="order__fieldset order__color">
-          <div class="order__wrapper">
             <legend class="order__legend order__legend--color">Цвет</legend>
+          <div class="order__wrapper">
           <div class="order__colors">
           <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="white" checked>Белый</label>
           <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="grey" checked>Серый</label>
@@ -91,7 +99,7 @@
           </div>
           </div>
         </fieldset>
-        <!--</div>-->
+        </div>
         <div class="container">
         <fieldset class="order__fieldset order__name">
           <legend class="order__legend order__legend--name">ФИО</legend>
@@ -103,10 +111,10 @@
         <!--<div class="container">-->
         <div class="order__contacts">
         <fieldset class="order__fieldset order__tel">
-          <div class="order__wrapper">
+          <!--<div class="order__wrapper">-->
           <legend class="order__legend order__legend--tel">Тел</legend>
           <input class="order__input order__input--tel" type="text" name="tel" placeholder="+7 XXX XXX XX XX*">
-          </div>
+          <!--</div>-->
         </fieldset>
         <!--</div>-->
         <fieldset class="order__fieldset order__email">
@@ -116,7 +124,7 @@
         </div>
         <div class="container">
         <fieldset class="order__fieldset order__add">
-          <legend class="order__legend">Доп</legend>
+          <legend class="order__legend order__legend--add">Доп</legend>
           <textarea placeholder="Опишите все ваши пожелания к заказу" class="order__textarea"></textarea>
           <!--</div>-->
         </fieldset>

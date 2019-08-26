@@ -2,6 +2,7 @@
   display: block;
   width: 320px;
   margin: 0 auto;
+  //position: relative;
 
   &__item {
     list-style: none;
@@ -68,6 +69,10 @@
   &__additional {
     display: none;
   }
+
+  &__delivery {
+    display: none;
+  }
 }
 
 .menu-closed {
@@ -110,6 +115,37 @@
       margin: 0;
       //flex-wrap: wrap;
     }
+
+    &__delivery {
+      display: block;
+      position: absolute;
+      top: 89px;
+      right: 0;
+      list-style: none;
+      z-index: 3;
+    }
+
+    &__delivery-rus {
+      color: @brown;
+      font-size: 15px;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    //&__delivery {
+    //  display: flex;
+    //  position: absolute;
+    //  top: 4px;
+    //  right: 156px;
+    //
+    //}
+    //
+    //&__delivery-rus {
+    //  color: @brown;
+    //  font-size: 15px;
+    //  font-weight: normal;
+    //  text-decoration: none;
+    //}
 
     &__link {
       padding: 31px 0;
