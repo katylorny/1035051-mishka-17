@@ -4,57 +4,56 @@
   background-color: @white;
   font: inherit;
   line-height: 30px;
+}
 
-  &__title {
-    font-size: 18px;
-    letter-spacing: 1px;
-    margin-top: 33px;
-  }
+.contacts__title {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 33px;
+}
 
-  &__wrapper {
-    width: 260px;
-    margin: 0 auto;
-    padding: 0;
-  }
+.contacts__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0;
+}
 
-  &__button {
-    display: block;
-    width: 236px;
-    margin: 0 auto 40px;
-    padding: 14px 10px;
-    text-align: center;
-  }
+.contacts__button {
+  display: block;
+  width: 236px;
+  margin: 0 auto 40px;
+  padding: 14px 10px;
+  text-align: center;
+}
 
-  &__address {
-    width: 260px;
-    border-spacing: 0 27px;
-    margin-top: -17px;
-  }
+.contacts__address {
+  width: 260px;
+  border-spacing: 0 27px;
+  margin-top: -17px;
+}
 
-  &__field {
-    vertical-align: top;
-    width: 77px;
-  }
+.contacts__field {
+  vertical-align: top;
+  width: 77px;
+}
 
-  &__value--email {
-    border-bottom: 1px solid @marine-dark;
-  }
+.contacts__value--email {
+  border-bottom: 1px solid @marine-dark;
+}
 
-  &__map {
-    //TODO: временно
-    position: relative;
-    width: 320px;
-    height: 457px;
-    background: white url("../img/map-mobile@1x.jpg") no-repeat;
-    background-position: top center;
-    margin: 9px auto 39px;
-  }
+.contacts__map {
+  position: relative;
+  width: 320px;
+  height: 457px;
+  background: white url("../img/map-mobile@1x.jpg") no-repeat;
+  background-position: top center;
+  margin: 9px auto 39px;
+}
 
-  &__marker {
-    position: absolute;
-    top: 145px;
-    left: 139px;
-  }
+.contacts__marker {
+  position: absolute;
+  top: 145px;
+  left: 139px;
 }
 
 @media (min-width: @tablet-width) {
@@ -62,71 +61,64 @@
     font-size: 17px;
     line-height: 30px;
     padding-top: 41px;
+  }
 
-    &__wrapper {
-      width: 668px;
+  .contacts__wrapper {
+    width: 668px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 64px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 618px;
+      width: 50px;
+      height: 82px;
+      background: url("../img/icon-flag.svg") no-repeat;
     }
+  }
 
-    &__title {
-      font-size: 43px;
-      line-height: 50px;
-      margin-bottom: 64px;
-      position: relative;
+  .contacts__address {
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: 56px;
+  }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: -15px;
-        left: 618px;
-        width: 50px;
-        height: 82px;
-        background: url("../img/icon-flag.svg") no-repeat;
-      }
-    }
+  .contacts__field--address {
+    padding-left: 46px;
+  }
 
-    &__address {
-      width: 100%;
-      border-spacing: 0;
-      margin-bottom: 56px;
-    }
+  .contacts__address tbody {
+    display: flex;
+  }
 
-    &__field--address {
-      padding-left: 46px;
-    }
+  //TODO: можно ли оставить tbody или надо задать класс?
+  .contacts__map {
+    width: @tablet-width;
+    background: url("../img/map-tablet@1x.jpg") no-repeat;
+    margin: 9px auto 55px;
+  }
 
-    &__address tbody {
-      display: flex;
-    }
+  .contacts__marker {
+    top: 139px;
+    left: 363px;
+  }
 
-    &__map {
-      width: @tablet-width;
-      background: url("../img/map-tablet@1x.jpg") no-repeat;
-      margin: 9px auto 55px;
-    }
-
-    &__marker {
-      top: 139px;
-      left: 363px;
-    }
-
-    &__button {
-      width: 206px;
-      margin-bottom: 57px;
-    }
+  .contacts__button {
+    width: 206px;
+    margin-bottom: 57px;
   }
 }
 
-//@media (min-width: @desktop-width) and (max-width: 1999px) {
-//  .contacts__address tbody {
-//    display: flex;
-//  }
-//}
-
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) and (min-width: @tablet-width) {
-  .contacts {
-    &__map {
-      background-image: url("../img/map-tablet@2x.jpg");
-    }
+  .contacts__map {
+    background-image: url("../img/map-tablet@2x.jpg");
   }
 }
 
@@ -137,66 +129,65 @@
     padding: 126px 0 105px 172px;
     position: relative;
     box-sizing: border-box;
+  }
 
-    &__wrapper {
-      position: static;
-      width: 1050px;
+  .contacts__wrapper {
+    position: static;
+    width: 1050px;
+  }
+
+  .contacts__wrapper--desktop {
+    width: 1050px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+    letter-spacing: 2.5px;
+
+    &::after {
+      top: -8px;
+      left: -109px;
     }
+  }
 
-    &__wrapper--desktop {
-      width: 1050px;
-      margin: 0 auto;
-      position: relative;
-    }
+  .contacts__address {
+    display: table;
+    border-spacing: 0 27px;
+    margin-top: -70px;
 
-    &__title {
-      font-size: 53px;
-      line-height: 57px;
-      letter-spacing: 2.5px;
-
-      &::after {
-        top: -8px;
-        left: -109px;
-      }
-    }
-
-    &__address {
+    tbody {
       display: table;
-      border-spacing: 0 27px;
-      margin-top: -70px;
-
-      tbody {
-        display: table;
-      }
     }
+  }
 
-    &__field--address {
-      padding: 0;
-    }
+  //TODO: тоже tbody
+  .contacts__field--address {
+    padding: 0;
+  }
 
-    &__map {
-      position: absolute;
-      top: -78px;
-      left: 353px;
-      width: 525px;
-      background-image: url("../img/map-desktop@1x.jpg");
-    }
+  .contacts__map {
+    position: absolute;
+    top: -78px;
+    left: 353px;
+    width: 525px;
+    background-image: url("../img/map-desktop@1x.jpg");
+  }
 
-    &__marker {
-      top: 145px;
-      left: 238px;
-    }
+  .contacts__marker {
+    top: 145px;
+    left: 238px;
+  }
 
-    &__button {
-      margin: -31px 0 0 3px;
-    }
+  .contacts__button {
+    margin: -31px 0 0 3px;
   }
 }
 
-@media (min-width: @desktop-width) and (min-resolution: 144dpi), (min-resolution: 1.5dppx){
-  .contacts {
-    &__map {
-      background-image: url("../img/map-desktop@2x.jpg");
-    }
+@media (min-width: @desktop-width) and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .contacts__map {
+    background-image: url("../img/map-desktop@2x.jpg");
   }
 }

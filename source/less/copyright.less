@@ -5,35 +5,33 @@
   line-height: 18px;
   color: @black;
   //cursor: pointer;
+}
 
-  &__link {
-    margin-left: 34px;
-    margin-top: 3px;
-  }
+.copyright__link {
+  margin-left: 34px;
+  margin-top: 3px;
+}
 
-  &__logo {
-    fill: @marine;
-  }
+.copyright__logo {
+  fill: @marine;
+}
 
-  &:hover &__logo {
-    fill: @icon-social-hover;
-  }
+.copyright:hover .copyright__logo {
+  fill: @icon-social-hover;
+}
 
-  &:active &__logo,
-  &:focus &__logo {
-    opacity: 0.4;
-  }
+.copyright:active .copyright__logo,
+.copyright:focus .copyright__logo {
+  opacity: 0.4;
+}
 
-  &:active &__text,
-  &:focus &__text {
-    opacity: 0.4;
-  }
+.copyright:active .copyright__text,
+.copyright:focus .copyright__text {
+  opacity: 0.4;
 }
 
 @media (min-width: @desktop-width) {
-  .copyright {
-    &__link {
-      margin-top: 5px;
-    }
+  .copyright__link {
+    margin-top: 5px;
   }
 }

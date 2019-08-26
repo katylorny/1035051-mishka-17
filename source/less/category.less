@@ -9,97 +9,97 @@
   line-height: 24px;
   font-weight: bold;
   color: @white;
+}
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .category {
-      background-image: url("../img/hero-mobile@2x.jpg");
-    }
+.category__delivery {
+  display: none;
+}
+
+.category__title {
+  color: @black;
+  text-align: center;
+  font-size: 27px;
+  line-height: 30px;
+  margin-bottom: 122px;
+  letter-spacing: 2px; //сделала, потому что шрифт вообще другой. не особо помогло.
+  margin-left: 6px; //пришлось сдвинуть вправо, чтобы хоть немного соответствовало макету
+}
+
+.category__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.category__item-text {
+  margin: 0;
+  width: 130px;
+  letter-spacing: 1.1px;
+}
+
+.category__item .category__link:hover::after,
+.category__item .category__link:focus::after {
+  opacity: 0.3;
+}
+
+.category__item .category__link:active::after {
+  opacity: 0.1;
+}
+
+.category__link {
+  text-decoration: none;
+  color: @white;
+  display: block;
+  padding: 30px;
+  padding-top: 25px;
+
+  &:hover,
+  &:focus {
+    padding-bottom: 35px;
+    margin-top: -5px;
   }
+}
 
-  &__delivery {
-    display: none;
-  }
+.category__item--interior .category__link {
+  background: @marine;
+  position: relative;
+}
 
-  &__title {
-    color: @black;
-    text-align: center;
-    font-size: 27px;
-    line-height: 30px;
-    margin-bottom: 122px;
-    letter-spacing: 2px; //сделала, потому что шрифт вообще другой. не особо помогло.
-    margin-left: 6px; //пришлось сдвинуть вправо, чтобы хоть немного соответствовало макету
-  }
+.category__item--interior .category__link::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 62px;
+  background: transparent url("../img/icon-interior.svg") no-repeat;
+  //TODO: здесь свгшка не того цвета
+  opacity: 0.2;
+  right: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  &__list {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-  }
+.category__item--toys .category__link {
+  background-color: @marine-dark;
+  position: relative;
+}
 
-  .category__item-text {
-    margin: 0;
-    width: 130px;
-    letter-spacing: 1.1px;
-  }
+.category__item--toys .category__link::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: transparent url("../img/icon-toy.svg") no-repeat;
+  opacity: 0.2;
+  right: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  &__item .category__link:hover::after,
-  &__item .category__link:focus::after {
-    opacity: 0.3;
-  }
-
-  &__item .category__link:active::after {
-    opacity: 0.1;
-  }
-
-  &__link {
-    text-decoration: none;
-    color: @white;
-    display: block;
-    padding: 30px;
-    padding-top: 25px;
-
-    &:hover,
-    &:focus {
-      padding-bottom: 35px;
-      margin-top: -5px;
-    }
-  }
-
-  &__item--interior .category__link {
-    background: @marine;
-    position: relative;
-  }
-
-  &__item--interior .category__link::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 62px;
-    background: transparent url("../img/icon-interior.svg") no-repeat;
-    //TODO: здесь свгшка не того цвета
-    opacity: 0.2;
-    right: 36px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__item--toys .category__link {
-    background-color: @marine-dark;
-    position: relative;
-  }
-
-  &__item--toys .category__link::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: transparent url("../img/icon-toy.svg") no-repeat;
-    opacity: 0.2;
-    right: 27px;
-    top: 50%;
-    transform: translateY(-50%);
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .category {
+    background-image: url("../img/hero-mobile@2x.jpg");
   }
 }
 
@@ -110,67 +110,67 @@
     width: auto;
     background: #f9f9f9 url("../img/hero-tablet@1x.jpg") no-repeat;
     background-position: top center;
+  }
 
-    &__link {
-      padding: 31px 30px 39px;
+  .category__link {
+    padding: 31px 30px 39px;
 
-      &:hover,
-      &:focus {
-        padding-bottom: 43px;
-      }
+    &:hover,
+    &:focus {
+      padding-bottom: 43px;
     }
+  }
 
-    &__list {
-      flex-direction: row;
-      width: 668px;
-      margin: 0 auto;
-      position: relative;
+  .category__list {
+    flex-direction: row;
+    width: 668px;
+    margin: 0 auto;
+    position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        width: 768px;
-        height: 46px;
-        background: url("../img/bg-zigzag-fill.svg") repeat-x;
-        bottom: -35px;
-        background-size: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    &__delivery {
-      display: flex;
+    &::after {
+      content: "";
       position: absolute;
-      top: -156px;
-      //НЕ ТОЧНО
-      right: 0;
-      list-style: none;
+      width: 768px;
+      height: 46px;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      bottom: -35px;
+      background-size: 100%;
+      left: 50%;
+      transform: translateX(-50%);
     }
+  }
 
-    &__delivery-rus {
-      color: @brown;
-      font-size: 15px;
-      font-weight: normal;
-      text-decoration: none;
+  .category__delivery {
+    display: flex;
+    position: absolute;
+    top: -156px;
+    //НЕ ТОЧНО
+    right: 0;
+    list-style: none;
+  }
+
+  .category__delivery-rus {
+    color: @brown;
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+  .category__title {
+    margin: 101px auto 373px;
+    letter-spacing: 2.5px;
+    padding-left: 9px;
+    width: 520px;
+    font-size: 43px;
+    line-height: 50px;
+
+    br {
+      display: none;
     }
+  }
 
-    &__title {
-      margin: 101px auto 373px;
-      letter-spacing: 2.5px;
-      padding-left: 9px;
-      width: 520px;
-      font-size: 43px;
-      line-height: 50px;
-
-      br {
-        display: none;
-      }
-    }
-
-    &__item {
-      width: 50%;
-    }
+  .category__item {
+    width: 50%;
   }
 }
 
@@ -185,30 +185,30 @@
     background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat;
     background-position: top center;
     padding-top: 70px;
+  }
 
-    &__list {
-      width: 1050px;
+  .category__list {
+    width: 1050px;
 
-      &::after {
-        content: "";
-        position: absolute;
-        //background-size: contain;
-        width: 100%;
-        height: 33px;
-        background: transparent url("../img/bg-zigzag-fill.svg") round;
-        bottom: -18px;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      //background-size: contain;
+      width: 100%;
+      height: 33px;
+      background: transparent url("../img/bg-zigzag-fill.svg") round;
+      bottom: -18px;
     }
+  }
 
-    &__delivery {
-      top: -162px;
-    }
+  .category__delivery {
+    top: -162px;
+  }
 
-    &__title {
-      font-size: 53px;
-      width: 610px;
-      margin: 91px auto 367px;
-    }
+  .category__title {
+    font-size: 53px;
+    width: 610px;
+    margin: 91px auto 367px;
   }
 }
 

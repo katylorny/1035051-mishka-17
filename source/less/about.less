@@ -4,155 +4,154 @@
   line-height: 20px;
   font-weight: bold;
   padding-top: 6px;
+}
 
-  &__advantages {
-    margin: 0 0 52px;
-    padding: 0;
-    list-style-type: none;
+.about__advantages {
+  margin: 0 0 52px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about__title {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.about__advantage {
+  margin-top: 84px;
+  position: relative;
+  letter-spacing: 1px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
   }
+}
 
-  &__title {
-    font-size: 25px;
-    line-height: 30px;
+.about__advantage--ecologic {
+  &::before {
+    width: 32px;
+    height: 39px;
+    background: url("../img/icon-feature-flower-marine.svg") no-repeat;
+    top: -53px;
+    left: 8px;
   }
+}
 
-  &__advantage {
-    margin-top: 84px;
-    position: relative;
-    letter-spacing: 1px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -60px;
-    }
+.about__advantage--skandi {
+  &::before {
+    width: 47px;
+    height: 28px;
+    background: url("../img/icon-feature-money-marine.svg") no-repeat;
+    top: -52px;
   }
+}
 
-  &__advantage--ecologic {
-    &::before {
-      width: 32px;
-      height: 39px;
-      background: url("../img/icon-feature-flower-marine.svg") no-repeat;
-      top: -53px;
-      left: 8px;
-    }
+.about__advantage--likes {
+  &::before {
+    width: 34px;
+    height: 28px;
+    background: url("../img/icon-feature-heart-marine.svg") no-repeat;
+    top: -48px;
+    left: 7px;
   }
+}
 
-  &__advantage--skandi {
-    &::before {
-      width: 47px;
-      height: 28px;
-      background: url("../img/icon-feature-money-marine.svg") no-repeat;
-      top: -52px;
-    }
+.about__advantage--handmade {
+  &::before {
+    width: 35px;
+    height: 34px;
+    background: url("../img/icon-feature-ball-marine.svg") no-repeat;
+    top: -52px;
+    left: 3px;
   }
+}
 
-  &__advantage--likes {
-    &::before {
-      width: 34px;
-      height: 28px;
-      background: url("../img/icon-feature-heart-marine.svg") no-repeat;
-      top: -48px;
-      left: 7px;
-    }
+.about__advantage--domestic {
+  &::before {
+    width: 55px;
+    height: 23px;
+    background: url("../img/icon-feature-rocket-marine.svg") no-repeat;
+    top: -52px;
+    left: -6px;
   }
+}
 
-  &__advantage--handmade {
-    &::before {
-      width: 35px;
-      height: 34px;
-      background: url("../img/icon-feature-ball-marine.svg") no-repeat;
-      top: -52px;
-      left: 3px;
-
-    }
-  }
-
-  &__advantage--domestic {
-    &::before {
-      width: 55px;
-      height: 23px;
-      background: url("../img/icon-feature-rocket-marine.svg") no-repeat;
-      top: -52px;
-      left: -6px;
-    }
-  }
-
-  &__advantage--gift {
-    &::before {
-      width: 33px;
-      height: 32px;
-      background: url("../img/icon-feature-gift-marine.svg") no-repeat;
-      top: -55px;
-      left: 3px;
-    }
+.about__advantage--gift {
+  &::before {
+    width: 33px;
+    height: 32px;
+    background: url("../img/icon-feature-gift-marine.svg") no-repeat;
+    top: -55px;
+    left: 3px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .about {
     padding-top: 24px;
+  }
 
-    &__title {
-      font-size: 43px;
-      line-height: 50px;
-      color: @black;
-      margin-bottom: 0;
-      letter-spacing: 1px;
+  .about__title {
+    font-size: 43px;
+    line-height: 50px;
+    color: @black;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+  }
+
+  .about__advantages {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 91px;
+  }
+
+  .about__advantage {
+    width: 50%;
+    color: @black;
+    margin-top: 110px;
+  }
+
+  .about__advantage--skandi {
+    order: 3;
+
+    &::before {
+      top: -55px;
+      left: 2px;
     }
+  }
 
-    &__advantages {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 20px;
-      margin-bottom: 91px;
+  .about__advantage--likes {
+    order: 5;
+  }
+
+  .about__advantage--handmade {
+    order: 2;
+
+    &::before {
+      top: -58px;
+      left: 3px;
     }
+  }
 
-    &__advantage {
-      width: 50%;
-      color: @black;
-      margin-top: 110px;
+  .about__advantage--domestic {
+    order: 4;
+  }
 
-      &--skandi {
-        order: 3;
+  .about__advantage--gift {
+    order: 5;
 
-        &::before {
-          top: -55px;
-          left: 2px;
-        }
-      }
+    &::before {
+      top: -50px;
+    }
+  }
 
-      &--likes {
-        order: 5;
-      }
-
-      &--handmade {
-        order: 2;
-
-        &::before {
-          top: -58px;
-          left: 3px;
-        }
-      }
-
-      &--domestic {
-        order: 4;
-      }
-
-      &--gift {
-        order: 5;
-
-        &::before {
-          top: -50px;
-        }
-      }
-
-      &--ecologic {
-        &::before {
-          top: -61px;
-          left: 9px;
-        }
-      }
+  .about__advantage--ecologic {
+    &::before {
+      top: -61px;
+      left: 9px;
     }
   }
 }
@@ -162,18 +161,18 @@
     width: 700px;
     margin: 0 auto;
     padding-top: 35px;
+  }
 
-    &__title {
-      font-size: 53px;
-      line-height: 57px;
-      letter-spacing: 1px;
-    }
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+    letter-spacing: 1px;
+  }
 
-    &__advantages {
-      width: 700px;
-      font-size: 20px;
-      line-height: 22px;
-      margin-top: -7px;
-    }
+  .about__advantages {
+    width: 700px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: -7px;
   }
 }

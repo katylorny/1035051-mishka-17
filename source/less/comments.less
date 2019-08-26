@@ -4,68 +4,66 @@
   background-color: @white;
   font: inherit;
   line-height: 30px;
+}
 
-  &__title {
-    font-size: 25px;
-    line-height: 30px;
-  }
+.comments__title {
+  font-size: 25px;
+  line-height: 30px;
+}
 
-  &__quote {
-    margin-bottom: 27px;
-  }
+.comments__quote {
+  margin-bottom: 27px;
+}
 
-  &__item {
-    margin: 0 0 29px;
-  }
+.comments__item {
+  margin: 0 0 29px;
+}
 
-  &__author {
-    font-style: normal;
-    font-size: 17px;
-    letter-spacing: 1px;
-    b {
-      color: @black;
-    }
-  }
+.comments__author {
+  font-style: normal;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: @black;
+}
 
-  &__toggle {
-    display: flex;
-    margin-bottom: 38px;
-    height: 50px;
-    width: 100%;
-    border: 1px solid @border;
-  }
+.comments__toggle {
+  display: flex;
+  margin-bottom: 38px;
+  height: 50px;
+  width: 100%;
+  border: 1px solid @border;
+}
 
-  &__prew,
-  &__next {
-    height: 100%;
-    width: 50%;
-    border: none;
-    cursor: pointer;
-    background: transparent;
-  }
+.comments__prew,
+.comments__next {
+  height: 100%;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
 
-  &__prew:focus .comments__arrow,
-  &__prew:hover .comments__arrow,
-  &__next:hover .comments__arrow,
-  &__next:focus .comments__arrow {
-    opacity: 0.6;
-  }
+.comments__prew:focus .comments__arrow,
+.comments__prew:hover .comments__arrow,
+.comments__next:hover .comments__arrow,
+.comments__next:focus .comments__arrow {
+  opacity: 0.6;
+}
 
-  &__prew:active .comments__arrow,
-  &__next:active .comments__arrow {
-    opacity: 0.3;
-  }
+.comments__prew:active .comments__arrow,
+.comments__next:active .comments__arrow {
+  opacity: 0.3;
+}
 
-  &__next {
-    border-left: 1px solid @border;
-  }
+.comments__next {
+  border-left: 1px solid @border;
+}
 
-  &__button {
-    display: block;
-    padding: 15px 0;
-    margin-bottom: 45px;
-    text-align: center;
-  }
+.comments__button {
+  display: block;
+  padding: 15px 0;
+  margin-bottom: 45px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -78,41 +76,41 @@
     margin: 0 auto 66px;
     padding-top: 43px;
     padding-bottom: 18px;
+  }
 
-    &__title {
-      font-size: 43px;
-      line-height: 50px;
-      margin-bottom: 46px;
-    }
+  .comments__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 46px;
+  }
 
-    &__wrap {
-      display: flex;
-    }
+  .comments__wrap {
+    display: flex;
+  }
 
-    &__toggle {
-      width: 167px;
-      margin: 0;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      border: none;
-    }
+  .comments__toggle {
+    width: 167px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+  }
 
-    &__next {
-      border: none;
-    }
+  .comments__next {
+    border: none;
+  }
 
-    &__button {
-      width: 171px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 14px 0;
-    }
+  .comments__button {
+    width: 171px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 14px 0;
+  }
 
-    &__quote {
-      margin-bottom: 55px;
-    }
+  .comments__quote {
+    margin-bottom: 55px;
   }
 }
 
@@ -131,25 +129,25 @@
     box-sizing: border-box;
     padding-bottom: 66px;
     margin-bottom: 66px;
+  }
 
-    &__title {
-      font-size: 53px;
-      line-height: 57px;
-    }
+  .comments__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 
-    &__quote {
-      width: 801px;
-      margin-bottom: 40px;
-    }
+  .comments__quote {
+    width: 801px;
+    margin-bottom: 40px;
+  }
 
-    &__button {
-      left: 699px;
-      top: 10px;
-    }
+  .comments__button {
+    left: 699px;
+    top: 10px;
+  }
 
-    &__toggle {
-      left: 699px;
-      bottom: 2px;
-    }
+  .comments__toggle {
+    left: 699px;
+    bottom: 2px;
   }
 }

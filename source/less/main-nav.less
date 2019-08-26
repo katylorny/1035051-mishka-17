@@ -3,85 +3,80 @@
   width: 320px;
   margin: 0 auto;
   //position: relative;
+}
 
-  &__item {
-    list-style: none;
-    //width: 100%;
-    border-top: 1px solid @border;
-    margin: 0 auto;
+.main-nav__item {
+  list-style: none;
+  //width: 100%;
+  border-top: 1px solid @border;
+  margin: 0 auto;
+}
+
+.main-nav__item--search {
+  position: relative;
+}
+
+.main-nav__item--basket {
+  position: relative;
+}
+
+.main-nav__icon {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  fill: @grey;
+}
+
+.main-nav__link {
+  display: block;
+  position: relative;
+  //width: 100%;
+  color: @black;
+  text-decoration: none;
+  padding: 33px 0 30px 75px;
+  tab-index: 1;
+
+  &:hover span,
+  &:focus span {
+    opacity: 0.6;
+  }
+  //TODO: задать класс спану, чтобы не было глобального тега!!
+
+  &:hover .main-nav__icon,
+  &:focus .main-nav__icon {
+    fill: @marine;
   }
 
-  &__item--search {
-    position: relative;
+  &:active {
+    opacity: 0.4;
   }
 
-  &__item--basket {
-    position: relative;
+  &:active .main-nav__icon {
+    opacity: 0.4;
+    fill: @marine;
   }
+}
 
+.main-nav__site,
+.main-nav__user {
+  width: 100%;
+  //list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  &__icon {
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    fill: @grey;
-  }
+.main-nav__additional {
+  display: none;
+}
 
-  &__link {
-    display: block;
-    position: relative;
-    //width: 100%;
-    color: @black;
-    text-decoration: none;
-    padding: 33px 0 30px 75px;
-    tab-index: 1;
-
-    &:hover span,
-    &:focus span {
-      opacity: 0.6;
-    }
-    //TODO: задать класс спану, чтобы не было глобального тега!!
-
-    &:hover .main-nav__icon,
-    &:focus .main-nav__icon {
-      fill: @marine;
-    }
-
-    &:active {
-      opacity: 0.4;
-    }
-
-    &:active .main-nav__icon {
-      opacity: 0.4;
-      fill: @marine;
-    }
-  }
-
-  &__site,
-  &__user {
-    width: 100%;
-    //list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__additional {
-    display: none;
-  }
-
-  &__delivery {
-    display: none;
-  }
+.main-nav__delivery {
+  display: none;
 }
 
 .menu-closed {
   display: none;
 }
-
-//.menu-opened {
-//  display: block;
-//}
 
 @media (min-width: @tablet-width) {
   .main-nav {
@@ -91,109 +86,89 @@
     margin-left: auto;
     width: auto;
     flex-wrap: wrap;
+  }
 
-    &__site {
-      position: absolute;
-      z-index: 10;
-      display: flex;
-      top: calc(100% + 18px);
-      right: 0;
-      flex-wrap: wrap;
-      font-size: 15px;
-      line-height: 25px;
-      //width: auto;
+  .main-nav__site {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    top: calc(100% + 18px);
+    right: 0;
+    flex-wrap: wrap;
+    font-size: 15px;
+    line-height: 25px;
+    //width: auto;
 
-      .main-nav__link {
-        padding: 0 34px 0 0;
-        letter-spacing: 1px;
-      }
+    .main-nav__link {
+      padding: 0 34px 0 0;
+      letter-spacing: 1px;
     }
+  }
 
-    &__user {
-      display: flex;
-      padding: 0;
-      margin: 0;
-      //flex-wrap: wrap;
-    }
+  .main-nav__user {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    //flex-wrap: wrap;
+  }
 
-    &__delivery {
-      display: block;
-      position: absolute;
-      top: 89px;
-      right: 0;
-      list-style: none;
-      z-index: 3;
-    }
+  .main-nav__delivery {
+    display: block;
+    position: absolute;
+    top: 89px;
+    right: 0;
+    list-style: none;
+    z-index: 3;
+  }
 
-    &__delivery-rus {
-      color: @brown;
-      font-size: 15px;
-      font-weight: normal;
-      text-decoration: none;
-    }
+  .main-nav__delivery-rus {
+    color: @brown;
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+  }
 
-    //&__delivery {
-    //  display: flex;
-    //  position: absolute;
-    //  top: 4px;
-    //  right: 156px;
-    //
-    //}
-    //
-    //&__delivery-rus {
-    //  color: @brown;
-    //  font-size: 15px;
-    //  font-weight: normal;
-    //  text-decoration: none;
-    //}
+  .main-nav__link {
+    padding: 31px 0;
+    position: relative;
+  }
 
-    &__link {
-      padding: 31px 0;
-      position: relative;
-    }
+  .main-nav__link--basket {
+    box-sizing: border-box;
+    width: 264px;
+    padding-left: 83px;
+    letter-spacing: 0.7px;
+  }
 
-    &__link--basket {
-      box-sizing: border-box;
-      width: 264px;
-      padding-left: 83px;
-      letter-spacing: 0.7px;
-    }
+  .main-nav__item--knitting {
+    border: none;
+  }
 
-    &__item--knitting {
-      border: none;
-    }
+  .main-nav__item {
+    border: none;
+    border-left: 1px solid @border;
+    margin: 0;
+  }
 
-    &__item {
-      border: none;
-      border-left: 1px solid @border;
-      margin: 0;
+  .main-nav__item--knitting,
+  .main-nav__item--catalog {
+    border: none;
+  }
 
-      &--knitting,
-      &--catalog {
-        border: none;
-      }
-    }
+  .main-nav__icon {
+    //position: static;
+  }
 
-    //&__item--search,
-    //&__item--knitting {
-    //  border: none;
-    //}
+  .main-nav__item--search {
+    font-size: 0;
+    padding: 0;
+    //margin-left: auto;
+    width: 84px;
+    //background-color: yellow;
+  }
 
-    &__icon {
-      //position: static;
-    }
-
-    &__item--search {
-      font-size: 0;
-      padding: 0;
-      //margin-left: auto;
-      width: 84px;
-      //background-color: yellow;
-    }
-
-    &__item--basket {
-      //position: relative;
-    }
+  .main-nav__item--basket {
+    //position: relative;
   }
 }
 
@@ -204,55 +179,55 @@
     justify-content: space-between;
     margin: 0;
     width: 100%;
+  }
 
-    &__site {
-      position: static;
-      width: auto;
-      z-index: 10; //Добавила, чтобы в каталоге было видно
-    }
+  .main-nav__site {
+    position: static;
+    width: auto;
+    z-index: 10; //Добавила, чтобы в каталоге было видно
+  }
 
-    &__user {
-      width: auto;
-    }
+  .main-nav__user {
+    width: auto;
+  }
 
-    &__site .main-nav__link {
-      padding: 30px 33px 30px 0;
-      display: block;
-      //margin: auto  0;
-    }
+  .main-nav__site .main-nav__link {
+    padding: 30px 33px 30px 0;
+    display: block;
+    font-size: 17px;
+  }
 
-    &__item--search {
-      border-left: none;
-    }
+  .main-nav__item--search {
+    border-left: none;
+  }
 
-    &__item--knitting .main-nav__link {
-      padding-left: 35px;
-    }
+  .main-nav__item--knitting .main-nav__link {
+    padding-left: 35px;
+  }
 
-    &__item--catalog {
-      border-left: none;
-      //border-right: 1px solid @border;
-    }
+  .main-nav__item--catalog {
+    border-left: none;
+    //border-right: 1px solid @border;
+  }
 
-    &__additional {
-      display: flex;
-      position: absolute;
-      padding: 0;
-      top: calc(100% - 26px);
-      left: 0;
-      color: @black;
-      z-index: 10;
-      font-size: 15px;
-      letter-spacing: 0.9px;
-    }
+  .main-nav__additional {
+    display: flex;
+    position: absolute;
+    padding: 0;
+    top: calc(100% - 26px);
+    left: 0;
+    color: @black;
+    z-index: 10;
+    font-size: 15px;
+    letter-spacing: 0.9px;
+  }
 
-    &__item--new {
-      border: none;
-    }
+  .main-nav__item--new {
+    border: none;
+  }
 
-    &__item--sell {
-      border-left: none;
-      margin-left: 60px;
-    }
+  .main-nav__item--sell {
+    border-left: none;
+    margin-left: 60px;
   }
 }
