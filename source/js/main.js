@@ -17,7 +17,7 @@ button.addEventListener("click", function (evt) {
   }
 });
 
-for (var i=0; i<cart.length; i++) {
+for (var i = 0; i < cart.length; i++) {
   cart[i].addEventListener("click", function (evt) {
     if (modal.classList.contains("modal--closed")) {
       modal.classList.remove("modal--closed");
@@ -26,12 +26,14 @@ for (var i=0; i<cart.length; i++) {
   });
 }
 
-overlay.addEventListener("click", function (evt) {
-  if (!modal.classList.contains("modal--closed")) {
-    modal.classList.add("modal--closed");
-    overlay.classList.remove("overlay--on");
-  }
-});
+if (overlay) {
+  overlay.addEventListener("click", function (evt) {
+    if (!modal.classList.contains("modal--closed")) {
+      modal.classList.add("modal--closed");
+      overlay.classList.remove("overlay--on");
+    }
+  });
+}
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
