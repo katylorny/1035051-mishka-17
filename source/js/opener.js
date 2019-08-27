@@ -4,6 +4,8 @@ var modal = document.querySelector(".modal");
 var cart = document.querySelectorAll(".product__reserve");
 var overlay = document.querySelector(".overlay");
 
+menu.classList.add("menu-closed");
+
 button.addEventListener("click", function (evt) {
   if (menu.classList.contains("menu-closed")) {
     menu.classList.remove("menu-closed");

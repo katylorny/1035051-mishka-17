@@ -81,7 +81,7 @@
         свяжемся
         с вами, чтобы уточнить детали.</p>
     </div>
-    <form class="order__form" action="https://echo.htmlacademy.ru">
+    <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
       <div class="container">
         <fieldset class="order__fieldset order__type">
           <legend class="order__legend order__legend--type">Тип</legend>
@@ -145,9 +145,11 @@
 </main>
 <footer class="footer">
   <div class="footer__wrapper container">
-    <svg class="footer__logo" width="102" height="43">
-      <use xlink:href="#logo-footer"></use>
-    </svg>
+    <a href="index.html">
+      <svg class="footer__logo" width="102" height="43">
+        <use xlink:href="#logo-footer"></use>
+      </svg>
+    </a>
     <div class="footer__social social">
       <a href="#" class="social__item social__item--instagram">
         <svg width="22" height="21" class="social__icon">

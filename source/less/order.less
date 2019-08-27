@@ -343,12 +343,11 @@
     background: transparent;
   }
 
-  .order__input--tel {
-    width: 468px;
-  }
-
+  .order__input--tel,
   .order__input--email {
-    width: 468px;
+    box-sizing: border-box;
+    width: 500px;
+    padding-right: 76px;
   }
 
   .order__name {
@@ -485,7 +484,9 @@
 
   .order__input--email,
   .order__input--tel {
-    width: 665px;
+    width: 700px;
+    padding: 0 44px 10px 17px;
+    box-sizing: border-box;
   }
 
   .order__tel {
@@ -507,6 +508,8 @@
 
   .order__textarea {
     width: 700px;
+    height: 142px;
+    resize: none;
   }
 
   .order__button {
