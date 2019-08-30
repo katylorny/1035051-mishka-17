@@ -1,18 +1,22 @@
 var button = document.querySelector(".header__wrap");
-var menu = document.querySelector(".main-nav");
+var menuSite = document.querySelector(".main-nav--site");
+var menuUser = document.querySelector(".main-nav--user");
 var modal = document.querySelector(".modal");
 var cart = document.querySelectorAll(".product__reserve");
 var overlay = document.querySelector(".overlay");
 
-menu.classList.add("menu-closed");
+menuSite.classList.add("menu-closed");
+menuUser.classList.add("menu-closed");
 
 button.addEventListener("click", function (evt) {
-  if (menu.classList.contains("menu-closed")) {
-    menu.classList.remove("menu-closed");
+  if (menuSite.classList.contains("menu-closed")) {
+    menuSite.classList.remove("menu-closed");
+    menuUser.classList.remove("menu-closed");
     button.classList.add("header__wrap--close");
   }
   else {
-    menu.classList.add("menu-closed");
+    menuSite.classList.add("menu-closed");
+    menuUser.classList.add("menu-closed");
     button.classList.remove("header__wrap--close");
   }
 });

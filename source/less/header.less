@@ -1,3 +1,118 @@
+//.header {
+//  margin: 0;
+//  //padding: 22px 0;
+//  background-color: @white;
+//  font: inherit;
+//  font-size: 17px;
+//  font-weight: bold;
+//  border-bottom: 1px solid @border;
+//}
+//
+//.header__wrapper {
+//  display: flex;
+//  width: 260px;
+//  margin: 0 auto;
+//  padding: 22px 0 16px;
+//}
+//
+//.header__link {
+//  display: block;
+//  //margin: 22px 0 16px calc(50% - 43px);
+//  margin-left: calc(50% - 43px);
+//}
+//
+//.header__logo {
+//  width: 86px;
+//  height: 35px;
+//
+//  &:hover {
+//    opacity: 0.6;
+//  }
+//
+//  &:active,
+//  &:focus {
+//    opacity: 0.4;
+//  }
+//}
+//
+//.header__wrap {
+//  padding: 0;
+//  margin: auto 0 19px auto;
+//  border: none;
+//  width: 20px;
+//  height: 14px;
+//  background: url("../img/icon-menu-open.svg") no-repeat;
+//  cursor: pointer;
+//}
+//
+//.header__wrap--close {
+//  background: url("../img/icon-menu-close.svg") no-repeat;
+//  width: 21px;
+//  height: 20px;
+//  margin: 7px 0 auto auto;
+//}
+//
+//@media (min-width: @tablet-width) {
+//  .header {
+//    //flex-wrap: wrap;
+//    padding: 0;
+//  }
+//
+//  .header__wrapper {
+//    width: 180px;
+//    padding: 20px 0 16px;
+//    margin: 0;
+//  }
+//
+//  .header__wrapper--tablet {
+//    width: 668px;
+//    margin: 0 auto;
+//    display: flex;
+//    box-sizing: border-box;
+//    position: relative;
+//  }
+//
+//  .header__wrap {
+//    display: none;
+//  }
+//
+//  .header__link {
+//    margin-left: 0;
+//    letter-spacing: 0.7px;
+//  }
+//
+//  .header__logo {
+//    width: 113px;
+//    height: 46px;
+//  }
+//}
+//
+//@media (min-width: @desktop-width) {
+//  .header__wrapper {
+//    width: auto;
+//  }
+//
+//  .header__wrapper--tablet {
+//    width: 1050px;
+//  }
+//
+//  .header__link {
+//    position: absolute;
+//    margin: 0;
+//    transform: translate(-50%);
+//    width: 149px;
+//    height: 72px;
+//    z-index: 3;
+//    left: 50%;
+//    top: 10px;
+//  }
+//
+//  .header__logo {
+//    width: 149px;
+//    height: 72px;
+//  }
+//}
+
 .header {
   margin: 0;
   //padding: 22px 0;
@@ -9,30 +124,11 @@
 }
 
 .header__wrapper {
+  box-sizing: border-box;
   display: flex;
   width: 260px;
   margin: 0 auto;
-  padding: 22px 0 16px;
-}
-
-.header__link {
-  display: block;
-  //margin: 22px 0 16px calc(50% - 43px);
-  margin-left: calc(50% - 43px);
-}
-
-.header__logo {
-  width: 86px;
-  height: 35px;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active,
-  &:focus {
-    opacity: 0.4;
-  }
+  padding: 22px 0 16px 80px;
 }
 
 .header__wrap {
@@ -52,63 +148,59 @@
   margin: 7px 0 auto auto;
 }
 
+.header__delivery {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .header {
-    //flex-wrap: wrap;
     padding: 0;
-  }
 
-  .header__wrapper {
-    width: 180px;
-    padding: 20px 0 16px;
-    margin: 0;
-  }
-
-  .header__wrapper--tablet {
-    width: 668px;
-    margin: 0 auto;
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: 88px;
+      left: 0;
+      background-color: #f9f9f9;
+      border-top: 1px solid @border;
+    }
   }
 
   .header__wrap {
     display: none;
   }
 
-  .header__link {
-    margin-left: 0;
-    letter-spacing: 0.7px;
-  }
-
-  .header__logo {
-    width: 113px;
-    height: 46px;
-  }
-}
-
-@media (min-width: @desktop-width) {
   .header__wrapper {
     width: auto;
+    padding-left: 0;
+    margin: 0;
+    order: -3;
   }
 
   .header__wrapper--tablet {
-    width: 1050px;
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    justify-content: space-between;
   }
 
-  .header__link {
-    position: absolute;
-    margin: 0;
-    transform: translate(-50%);
-    width: 149px;
-    height: 72px;
-    z-index: 3;
-    left: 50%;
-    top: 10px;
+  .header__delivery {
+    display: block;
+    order: 100;
+    z-index: 2;
+    margin-top: 16px;
+
+    .header__delivery-rus {
+      text-decoration: none;
+      color: @brown;
+      font-size: 15px;
+      font-weight: normal;
+    }
   }
 
-  .header__logo {
-    width: 149px;
-    height: 72px;
-  }
 }
