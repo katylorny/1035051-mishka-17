@@ -1,6 +1,6 @@
-var button = document.querySelector(".header__wrap");
-var menuSite = document.querySelector(".main-nav--site");
-var menuUser = document.querySelector(".main-nav--user");
+var button = document.querySelector(".main-nav__menu-button");
+var menuSite = document.querySelector(".main-nav__site");
+var menuUser = document.querySelector(".main-nav__user");
 var modal = document.querySelector(".modal");
 var cart = document.querySelectorAll(".product__reserve");
 var overlay = document.querySelector(".overlay");
@@ -17,7 +17,7 @@ button.addEventListener("click", function (evt) {
   else {
     menuSite.classList.add("menu-closed");
     menuUser.classList.add("menu-closed");
-    button.classList.remove("header__wrap--close");
+    button.classList.remove("main-nav__menu-button--close");
   }
 });
 
