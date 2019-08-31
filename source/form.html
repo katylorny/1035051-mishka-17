@@ -9,6 +9,7 @@
   <link rel="preload" href="fonts/opensans.woff" as="font">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <script src="js/picturefill.js"></script>
 </head>
 <body>
 <div style="display: none;">
@@ -58,7 +59,8 @@
         <a class="main-nav__link" href="#">
           <span class="main-nav__content">Новые поступления</span></a>
       </li>
-      <li class="main-nav__item main-nav__item--sell"><a class="main-nav__link" href="#"><span class="main-nav__content">Распродажа</span></a>
+      <li class="main-nav__item main-nav__item--sell"><a class="main-nav__link" href="#"><span
+        class="main-nav__content">Распродажа</span></a>
       </li>
     </ul>
     <p class="main-nav__delivery">Бесплатная доставка по России</p>
@@ -78,70 +80,86 @@
     <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
       <div class="container">
         <fieldset class="order__fieldset order__type">
-          <legend class="order__legend order__legend--type">Тип</legend>
-          <label class="order__label order__label--radio">
-            <input class="order__radio" type="radio" name="type" checked>
-            <span class="order__radio-name">Аксессуар для интерьера</span>
-          </label>
-          <label class="order__label order__label--radio">
-            <input class="order__radio" type="radio" name="type">
-            <span class="order__radio-name">Детская игрушка</span>
-          </label>
+          <div class="order__fieldset-wrapper">
+            <legend class="order__legend order__legend--type">Тип</legend>
+            <div class="order__labels">
+              <label class="order__label order__label--radio">
+                <input class="order__radio" type="radio" name="type" checked>
+                <span class="order__radio-name">Аксессуар для интерьера</span>
+              </label>
+              <label class="order__label order__label--radio">
+                <input class="order__radio" type="radio" name="type">
+                <span class="order__radio-name">Детская игрушка</span>
+              </label>
+            </div>
+          </div>
         </fieldset>
       </div>
       <div class="order__wrap">
         <fieldset class="order__fieldset order__color">
-          <legend class="order__legend order__legend--color">Цвет</legend>
-          <div class="order__wrapper">
-            <div class="order__colors">
-              <label class="order__label order__label--checkbox">
-                <input class="order__checkbox" type="checkbox" name="white" checked>
-                <span class="order__checkbox-name">Белый</span>
-              </label>
-              <label class="order__label order__label--checkbox">
-                <input class="order__checkbox" type="checkbox" name="grey" checked>
-                <span class="order__checkbox-name">Серый</span>
-              </label>
-              <label class="order__label order__label--checkbox">
-                <input class="order__checkbox" type="checkbox" name="tiffani">
-                <span class="order__checkbox-name">&laquo;Тиффани&raquo;</span>
-              </label>
-              <label class="order__label order__label--checkbox">
-                <input class="order__checkbox" type="checkbox" name="black">
-                <span class="order__checkbox-name">Черный</span>
-              </label>
-              <label class="order__label order__label--checkbox">
-                <input class="order__checkbox" type="checkbox" name="rose">
-                <span class="order__checkbox-name">Розовый</span>
-              </label>
-              <label class="order__label order__label--checkbox">
-                <input class="order__checkbox" type="checkbox" name="orange">
-                <span class="order__checkbox-name">Оранжевый</span>
-              </label>
+          <div class="order__fieldset-wrapper">
+            <legend class="order__legend order__legend--color">Цвет</legend>
+            <div class="order__wrapper">
+              <div class="order__colors">
+                <label class="order__label order__label--checkbox">
+                  <input class="order__checkbox" type="checkbox" name="white" checked>
+                  <span class="order__checkbox-name">Белый</span>
+                </label>
+                <label class="order__label order__label--checkbox">
+                  <input class="order__checkbox" type="checkbox" name="grey" checked>
+                  <span class="order__checkbox-name">Серый</span>
+                </label>
+                <label class="order__label order__label--checkbox">
+                  <input class="order__checkbox" type="checkbox" name="tiffani">
+                  <span class="order__checkbox-name">&laquo;Тиффани&raquo;</span>
+                </label>
+                <label class="order__label order__label--checkbox">
+                  <input class="order__checkbox" type="checkbox" name="black">
+                  <span class="order__checkbox-name">Черный</span>
+                </label>
+                <label class="order__label order__label--checkbox">
+                  <input class="order__checkbox" type="checkbox" name="rose">
+                  <span class="order__checkbox-name">Розовый</span>
+                </label>
+                <label class="order__label order__label--checkbox">
+                  <input class="order__checkbox" type="checkbox" name="orange">
+                  <span class="order__checkbox-name">Оранжевый</span>
+                </label>
+              </div>
             </div>
           </div>
         </fieldset>
       </div>
       <div class="container">
         <fieldset class="order__fieldset order__name">
-          <legend class="order__legend order__legend--name">ФИО</legend>
-          <label class="order__label order__label--name">Имя: <input class="order__input" type="text" name="name" placeholder="Введите ваше имя*"></label>
-          <label class="order__label order__label--name">Фамилия: <input class="order__input" type="text" name="surname" placeholder="Укажите фамилию*"></label>
-          <label class="order__label order__label--name">Отчество: <input class="order__input" type="text" name="second-name" placeholder="Отчество, если желаете"></label>
+          <div class="order__fieldset-wrapper">
+            <legend class="order__legend order__legend--name">ФИО</legend>
+            <div class="order__legends">
+              <label class="order__label order__label--name">Имя: <input class="order__input" type="text" name="name"
+                                                                         placeholder="Введите ваше имя*"></label>
+              <label class="order__label order__label--name">Фамилия: <input class="order__input" type="text"
+                                                                             name="surname"
+                                                                             placeholder="Укажите фамилию*"></label>
+              <label class="order__label order__label--name">Отчество: <input class="order__input" type="text"
+                                                                              name="second-name"
+                                                                              placeholder="Отчество, если желаете"></label>
+            </div>
+          </div>
         </fieldset>
       </div>
       <!--<div class="container">-->
       <div class="order__contacts">
         <fieldset class="order__fieldset order__tel">
-          <!--<div class="order__wrapper">-->
-          <legend class="order__legend order__legend--tel">Тел</legend>
-          <input class="order__input order__input--tel" type="text" name="tel" placeholder="+7 XXX XXX XX XX*">
-          <!--</div>-->
+          <div class="order__fieldset-wrapper">
+            <legend class="order__legend order__legend--tel">Тел</legend>
+            <input class="order__input order__input--tel" type="text" name="tel" placeholder="+7 XXX XXX XX XX*">
+          </div>
         </fieldset>
-        <!--</div>-->
         <fieldset class="order__fieldset order__email">
-          <legend class="order__legend order__legend--email">E-mail</legend>
-          <input class="order__input order__input--email" type="text" name="email" placeholder="Ваш Email*">
+          <div class="order__fieldset-wrapper">
+            <legend class="order__legend order__legend--email">E-mail</legend>
+            <input class="order__input order__input--email" type="text" name="email" placeholder="Ваш Email*">
+          </div>
         </fieldset>
       </div>
       <div class="container">
