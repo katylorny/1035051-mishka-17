@@ -21,6 +21,12 @@
   letter-spacing: 1.5px;
 }
 
+.catalog__wrapper {
+  width: 100%;
+  background-color: @white;
+  padding-top: 31px;
+}
+
 @media (min-width: @tablet-width) {
   .catalog {
     position: relative;
@@ -34,6 +40,25 @@
     line-height: 50px;
     letter-spacing: 1.9px;
   }
+
+  .catalog__wrapper {
+    position: relative;
+    padding-top: 81px;
+  }
+
+  .catalog__wrapper::before {
+    content: "";
+    width: @tablet-width;
+    height: 24px;
+    background: url("../img/bg-zigzag-fill.svg") no-repeat;
+    //background-position-x: -50px;
+    position: absolute;
+    background-size: 100%;
+    z-index: 11;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -46,5 +71,15 @@
     font-size: 53px;
     font-weight: bold;
     margin-bottom: 106px;
+  }
+
+  .catalog__wrapper {
+    padding-top: 129px;
+  }
+
+  .catalog__wrapper::before {
+    width: 1150px;
+    top: -15px;
+    background-size: 100%;
   }
 }

@@ -7,6 +7,7 @@ var overlay = document.querySelector(".overlay");
 
 menuSite.classList.add("menu-closed");
 menuUser.classList.add("menu-closed");
+button.classList.remove("main-nav__menu-button--hidden");
 
 button.addEventListener("click", function (evt) {
   if (menuSite.classList.contains("menu-closed")) {

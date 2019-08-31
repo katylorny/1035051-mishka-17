@@ -24,7 +24,7 @@
           <img class="main-nav__logo" src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
         </picture>
       </a>
-      <button type="button" class="main-nav__menu-button" aria-label="Открыть меню">
+      <button type="button" class="main-nav__menu-button main-nav__menu-button--hidden" aria-label="Открыть меню">
         <!--<img src="img/icon-menu-open.svg" width="20" height="14">-->
       </button>
     </div>
@@ -64,7 +64,7 @@
     <p class="main-nav__delivery">Бесплатная доставка по России</p>
   </nav>
 </header>
-<main>
+<main class="main">
   <!--<div class="container">-->
   <section class="order">
     <div class="order__header">
@@ -79,23 +79,45 @@
       <div class="container">
         <fieldset class="order__fieldset order__type">
           <legend class="order__legend order__legend--type">Тип</legend>
-          <label class="order__label order__label--radio"><input class="order__radio" type="radio" name="type" checked>Аксессуар
-            для интерьера</label>
-          <label class="order__label order__label--radio"><input class="order__radio" type="radio" name="type">Детская
-            игрушка</label>
+          <label class="order__label order__label--radio">
+            <input class="order__radio" type="radio" name="type" checked>
+            <span class="order__radio-name">Аксессуар для интерьера</span>
+          </label>
+          <label class="order__label order__label--radio">
+            <input class="order__radio" type="radio" name="type">
+            <span class="order__radio-name">Детская игрушка</span>
+          </label>
         </fieldset>
       </div>
-      <div class="order__color--wrap">
+      <div class="order__wrap">
         <fieldset class="order__fieldset order__color">
           <legend class="order__legend order__legend--color">Цвет</legend>
           <div class="order__wrapper">
             <div class="order__colors">
-              <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="white" checked>Белый</label>
-              <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="grey" checked>Серый</label>
-              <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="tiffani">&laquo;Тиффани&raquo;</label>
-              <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="black">Черный</label>
-              <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="rose">Розовый</label>
-              <label class="order__label order__label--checkbox"><input class="order__checkbox" type="checkbox" name="orange">Оранжевый</label>
+              <label class="order__label order__label--checkbox">
+                <input class="order__checkbox" type="checkbox" name="white" checked>
+                <span class="order__checkbox-name">Белый</span>
+              </label>
+              <label class="order__label order__label--checkbox">
+                <input class="order__checkbox" type="checkbox" name="grey" checked>
+                <span class="order__checkbox-name">Серый</span>
+              </label>
+              <label class="order__label order__label--checkbox">
+                <input class="order__checkbox" type="checkbox" name="tiffani">
+                <span class="order__checkbox-name">&laquo;Тиффани&raquo;</span>
+              </label>
+              <label class="order__label order__label--checkbox">
+                <input class="order__checkbox" type="checkbox" name="black">
+                <span class="order__checkbox-name">Черный</span>
+              </label>
+              <label class="order__label order__label--checkbox">
+                <input class="order__checkbox" type="checkbox" name="rose">
+                <span class="order__checkbox-name">Розовый</span>
+              </label>
+              <label class="order__label order__label--checkbox">
+                <input class="order__checkbox" type="checkbox" name="orange">
+                <span class="order__checkbox-name">Оранжевый</span>
+              </label>
             </div>
           </div>
         </fieldset>

@@ -6,12 +6,6 @@
   list-style: none;
 }
 
-.product__wrapper {
-  width: 100%;
-  background-color: @white;
-  padding-top: 31px;
-}
-
 .product__wrap {
   width: 208px;
   margin: 0 auto;
@@ -147,25 +141,6 @@
     font-size: 15px;
     line-height: 30px;
   }
-
-  .product__wrapper {
-    position: relative;
-    padding-top: 81px;
-  }
-
-  .product__wrapper::before {
-    content: "";
-    width: @tablet-width;
-    height: 24px;
-    background: url("../img/bg-zigzag-fill.svg") no-repeat;
-    //background-position-x: -50px;
-    position: absolute;
-    background-size: 100%;
-    z-index: 11;
-    top: -10px;
-    left: 50%;
-    transform: translate(-50%);
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -201,16 +176,6 @@
     flex-direction: column;
     justify-content: space-between;
     flex-basis: 196px;
-  }
-
-  .product__wrapper {
-    padding-top: 129px;
-  }
-
-  .product__wrapper::before {
-    width: 1150px;
-    top: -15px;
-    background-size: 100%;
   }
 
   .product__image {

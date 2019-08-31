@@ -311,6 +311,10 @@
   cursor: pointer;
 }
 
+.main-nav__menu-button--hidden {
+  display: none;
+}
+
 .main-nav__menu-button--close {
   background: url("../img/icon-menu-close.svg") no-repeat;
   width: 21px;
@@ -336,7 +340,6 @@
     order: -3;
   }
 
-
   .main-nav__menu-button {
     display: none;
   }
@@ -350,20 +353,19 @@
     margin: 0;
   }
 
-
   .main-nav__site {
     z-index: 10;
     font-size: 15px;
     line-height: 25px;
     display: flex;
     flex-wrap: wrap;
-    width: 346px;
+    width: 360px;
     order: -1;
     padding-top: 16px;
     //width: auto;
 
     .main-nav__link {
-      padding: 0 34px 0 0;
+      padding: 0 31px 0 0;
       letter-spacing: 1px;
     }
   }
@@ -384,6 +386,7 @@
   .main-nav__item {
     border: none;
     flex-shrink: 0;
+    margin: 0;
   }
 
   .main-nav__item--search {
@@ -429,7 +432,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-    width: 387px;
+    width: 388px;
 
     .main-nav__link {
       box-sizing: border-box;
