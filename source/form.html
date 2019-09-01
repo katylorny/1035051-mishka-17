@@ -119,7 +119,7 @@
                 </label>
                 <label class="order__label order__label--checkbox">
                   <input class="order__checkbox" type="checkbox" name="rose">
-                  <span class="order__checkbox-name">Розовый</span>
+                  <span class="order__checkbox-name">Розовый </span>
                 </label>
                 <label class="order__label order__label--checkbox">
                   <input class="order__checkbox" type="checkbox" name="orange">
@@ -135,14 +135,9 @@
           <div class="order__fieldset-wrapper">
             <h3 class="order__legend order__legend--name"><span class="order__legend-text">ФИО</span></h3>
             <div class="order__legends">
-              <label class="order__label order__label--name">Имя: <input class="order__input" type="text" name="name"
-                                                                         placeholder="Введите ваше имя*"></label>
-              <label class="order__label order__label--name">Фамилия: <input class="order__input" type="text"
-                                                                             name="surname"
-                                                                             placeholder="Укажите фамилию*"></label>
-              <label class="order__label order__label--name">Отчество: <input class="order__input" type="text"
-                                                                              name="second-name"
-                                                                              placeholder="Отчество, если желаете"></label>
+              <label class="order__label order__label--name">Имя: <input class="order__input" type="text" name="name" placeholder="Введите ваше имя*"></label>
+              <label class="order__label order__label--name">Фамилия: <input class="order__input" type="text" name="surname" placeholder="Укажите фамилию*"></label>
+              <label class="order__label order__label--name">Отчество: <input class="order__input" type="text" name="second-name" placeholder="Отчество, если желаете"></label>
             </div>
           </div>
         </fieldset>
@@ -151,14 +146,28 @@
       <div class="order__contacts">
         <fieldset class="order__fieldset order__tel">
           <div class="order__fieldset-wrapper">
-            <h3 class="order__legend order__legend--tel"><span class="order__legend-text">Тел</span></h3>
-            <input class="order__input order__input--tel" type="text" name="tel" placeholder="+7 XXX XXX XX XX*">
+            <h3 class="order__legend order__legend--tel">
+              <span class="order__legend-text">Тел</span>
+            </h3>
+            <input class="order__input order__input--tel" type="text" name="tel" placeholder="+7 XXX XXX XX XX*" id="phone-input">
+            <label for="phone-input" class="order__tel-label">
+              <svg class="order__tel-icon" width="25" height="25">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+            </label>
           </div>
         </fieldset>
         <fieldset class="order__fieldset order__email">
           <div class="order__fieldset-wrapper">
-            <h3 class="order__legend order__legend--email"><span class="order__legend-text">E-mail</span></h3>
-            <input class="order__input order__input--email" type="text" name="email" placeholder="Ваш Email*">
+            <h3 class="order__legend order__legend--email">
+              <span class="order__legend-text">E-mail</span>
+            </h3>
+            <input class="order__input order__input--email" type="text" name="email" placeholder="Ваш Email*" id="email-input">
+            <label for="email-input" class="order__email-label">
+              <svg class="order__email-icon" width="32" height="32">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </label>
           </div>
         </fieldset>
       </div>
