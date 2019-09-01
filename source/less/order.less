@@ -18,7 +18,7 @@
 }
 
 .order__about {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 }
 
 .order__header {
@@ -26,22 +26,64 @@
 }
 
 .order__legend {
+  position: relative;
   padding-right: 25px;
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: @marine;
+  //margin-bottom: 33px;
+  margin-bottom: 34px;
+  //display: block;
+  margin-top: 0;
+}
+
+.order__legend--name {
+  margin-bottom: 32px;
+  //margin-top: 0;
+}
+
+.order__legend--add {
+  margin-bottom: 8px;
+}
+
+.order__legend--color {
+  //margin-top: 0;
+}
+
+.order__legend-text {
+  &::after {
+    //width: calc(100% - 81px);
+    //left: 81px;
+    content: "";
+    //width: 100%;
+    width: calc(100% - 58px);
+    height: 1px;
+    background-color: @marine;
+    position: absolute;
+    top: 8px;
+    left: 60px;
+    z-index: 100;
+    padding-left: 55px;
+    box-sizing: border-box;
+  }
+}
+
+.order__add .order__legend-text::after {
+  width: 198px;
+  left: 60px;
 }
 
 .order__fieldset {
   border: none;
-  border-top: 1px solid @marine;
-  padding: 8px 0 44px;
+  //border-top: 1px solid @marine;
+  //padding: 8px 0 44px;
+  padding: 0 0 44px;
 }
 
 .order__color {
-  padding-top: 36px;
+  //padding-top: 36px;
   padding-bottom: 0;
   width: 260px;
   margin: 0 auto;
@@ -133,6 +175,11 @@
   }
 }
 
+.order__email .order__legend-text::after {
+  width: calc(100% - 82px);
+  left: 82px;
+}
+
 .order__checkbox:checked + .order__checkbox-name::before {
   background: url("../img/icon-tick.svg") no-repeat;
   background-size: 71%;
@@ -159,15 +206,19 @@
 }
 
 .order__name {
-  padding: 6px 0 31px;
+  padding: 0 0 31px;
 }
 
 .order__tel,
 .order__email {
-  padding: 8px 0 33px;
+  padding: 0 0 33px;
   position: relative;
   width: 260px;
   margin: 0 auto;
+
+  .order__legend {
+    margin-bottom: 8px;
+  }
 }
 
 .order__tel::after {
@@ -197,10 +248,11 @@
   font-size: 17px;
   padding: 12px 13px 0;
   box-sizing: border-box;
-  margin: 17px 0 8px;
   height: 142px;
   width: 259px;
   resize: none;
+  margin: 17px 0 8px;
+  //margin-bottom: 15px;
 }
 
 .order__add {
@@ -273,6 +325,28 @@
   .order__legend {
     display: block;
     margin-top: 27px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .order__legend--email {
+    width: 55px;
+    padding: 0;
+    margin-top: 32px;
+  }
+
+  .order__legend--tel {
+    margin-top: 16px;
+  }
+
+  .order__legend--add {
+    margin-top: 34px;
+  }
+
+  .order__legend-text::after {
+    display: none;
   }
 
   .order__legends {
@@ -365,6 +439,11 @@
     width: 500px;
     padding-right: 76px;
     margin-left: 112px;
+    margin-top: 13px;
+  }
+
+  .order__input--email {
+    margin-top: 29px;
   }
 
   .order__name {
@@ -385,7 +464,8 @@
   }
 
   .order__tel {
-    padding-top: 60px;
+    padding-top: 51px;
+    padding-bottom: 4px;
 
     &::after {
       top: 60px;
@@ -398,15 +478,16 @@
     padding-bottom: 50px;
 
     &::after {
-      top: 2px;
+      top: 31px;
       right: 23px;
     }
   }
 
   .order__add {
     padding-top: 33px;
-    padding-left: 165px;
-    margin-bottom: 38px;
+    padding-left: 0;
+    //margin-bottom: 38px;
+    margin-bottom: 45px;
   }
 
   .order__textarea {
@@ -414,6 +495,7 @@
     width: 501px;
     font-size: 19px;
     line-height: 18px;
+    margin-left: 103px;
   }
 
   .order__contacts {
@@ -449,38 +531,63 @@
     }
   }
 
+  .order__fieldset-wrapper {
+    width: 1050px;
+  }
+
   .order__about {
     padding-right: 160px;
     padding-left: 174px;
   }
 
   .order__type {
-    padding-left: 193px;
+    padding-left: 0;
+  }
+
+  .order__labels {
+    margin-left: 71px;
+  }
+
+  .order__legends {
+    margin-left: 49px;
+    width: 696px;
   }
 
   .order__legend--type {
-    left: 63px;
+    //left: 63px;
   }
 
   .order__legend--color {
-    left: 62px;
+    .order__legend-text {
+      margin-left: 33px;
+    }
+  }
+
+  .order__color .order__legend {
+    margin-top: 0;
+    margin-left: 29px;
   }
 
   .order__legend--name {
-    left: 61px;
+    //left: 61px;
   }
 
   .order__legend--tel {
-    left: 63px;
+    //left: 63px;
   }
 
   .order__legend--email {
-    top: 10px;
-    left: 63px;
+    //top: 10px;
+    //left: 63px;
+    width: auto;
   }
 
   .order__legend--add {
-    left: 62px;
+    //left: 62px;
+  }
+
+  .order__legend-text {
+    margin-left: 63px;
   }
 
   .order__wrapper {
@@ -489,17 +596,21 @@
 
   .order__colors {
     width: auto;
-    margin-left: 196px;
+    margin-left: 67px;
+  }
+
+  .order__color {
+    padding-top: 63px;
   }
 
   .order__name {
-    padding: 26px 173px 50px 175px;
+    padding: 26px 173px 50px 0px;
   }
 
   .order__email,
   .order__tel {
     width: 1050px;
-    padding-left: 151px;
+    padding-left: 0;
     box-sizing: border-box;
   }
 
@@ -508,6 +619,7 @@
     width: 700px;
     padding: 0 44px 10px 17px;
     box-sizing: border-box;
+    margin-left: 56px;
   }
 
   .order__tel {
@@ -523,13 +635,16 @@
   }
 
   .order__add {
-    padding-left: 173px;
-    margin-bottom: 34px;
+    padding-left: 0;
+    margin-bottom: 41px;
+    padding-top: 39px;
   }
 
   .order__textarea {
     width: 700px;
     height: 142px;
+    margin-left: 48px;
+    margin-top: 13px;
   }
 
   .order__button {
